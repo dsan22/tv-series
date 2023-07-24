@@ -50,7 +50,7 @@ public class DatabaseUserProvider implements UserProvider {
     @Override
     public void saveUser(User user) {
         UserEntity entity=UserEntityMapper.toEntity(user);
-        entity.setRole(Roles.USER.name());
+        entity.setRole(Roles.USER);
         log.info("Saved User");
         userDao.save(entity);
     }
@@ -74,7 +74,7 @@ public class DatabaseUserProvider implements UserProvider {
     @Override
     public void grantAuthority(String username, Roles authority) {
         UserEntity user=userDao.findByUsername(username).orElseThrow(()->new UnknownUserException(username));
-        user.setRole(authority.name());
+        user.setRole(authority);
         userDao.save(user);
     }
 }
