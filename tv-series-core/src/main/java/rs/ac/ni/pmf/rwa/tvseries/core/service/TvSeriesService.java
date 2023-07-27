@@ -2,7 +2,9 @@ package rs.ac.ni.pmf.rwa.tvseries.core.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateIdException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownTvSeriesException;
@@ -15,17 +17,18 @@ import java.util.List;
 public class TvSeriesService {
     private final TvSeriesProvider tvSeriesProvider;
 
+    public Page<TvSeries> getAllTvSeries(TvSeriesSearchOptions tvSeriesSearchOptions) {
+
+        log.info("Getting all TvSeries.");
+        return tvSeriesProvider.getAllTvSeries(tvSeriesSearchOptions);
+
+    }
     public TvSeries getTvSeriesById(Integer id){
         log.info("Getting TvSeries with id [{}] .",id);
         return tvSeriesProvider.getTvSeriesById(id).orElseThrow( () -> new UnknownTvSeriesException(id));
     }
 
-    public List<TvSeries> getAllTvSeries(String searchKey, int pageNumber)
-    {
 
-        log.info("Getting all TvSeries.");
-        return tvSeriesProvider.getAllTvSeries(searchKey,pageNumber);
-    }
 
     public void createTvSeries(final TvSeries tvSeries)
     {
@@ -72,5 +75,7 @@ public class TvSeriesService {
         tvSeriesProvider.removeTvSeries(id);
 
     }
+
+
 
 }
