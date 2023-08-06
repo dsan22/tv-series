@@ -10,9 +10,16 @@ import lombok.Value;
 public class TvSeriesDTO  {
 
 
+    @Schema(description = "Tv Series identifier", example = "1")
+
     Integer id;
+
+    @Schema(description = "Tv Series name", example = "Game of Thrones")
     String name;
+    @Schema(description = "Number of episodes Tv Series have", example = "10")
     Integer numberOfEpisodes;
+
+    @Schema(description = "Average rating of Tv Series ", example = "8.4")
     Double averageRating;
 
 }

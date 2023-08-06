@@ -2,16 +2,22 @@ package rs.ac.ni.pmf.rwa.tvseries.data.provider;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
+import rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.mapper.TvSeriesEntityMapper;
+import rs.ac.ni.pmf.rwa.tvseries.data.specification.TvSeriesSearchSpecification;
+import rs.ac.ni.pmf.rwa.tvseries.data.specification.WatchedTvSeriesSearchSpecification;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownTvSeriesException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownUserException;
 
@@ -26,6 +32,8 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
 
     final UserDao userDao;
     final TvSeriesDao tvSeriesDao;
+
+    final WatchListDao watchListDao;
 
 
 
@@ -52,13 +60,25 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
         userDao.save(user);
     }
 
+
+
+
     @Override
-    public List<TvSeries>  getTvSeriesByUsername(String username){
-        UserEntity user= userDao.findByUsername(username).orElseThrow(()-> new UnknownUserException(username));
+    public Page<TvSeries> getTvSeriesByUsername(String username, WatchTvSeriesSearchOptions searchOptions) {
 
-        log.info("Returned list of all Tv Series watched by user[{}] ",username);
-        return  user.getWatchedTvSeries().stream().map( TvSeriesEntityMapper::fromWatchListEntity).collect(Collectors.toList());
+        int page = 0;
+        if(searchOptions.getPage() != null && searchOptions.getPage() > 0) {
+            page = searchOptions.getPage() - 1;
+        }
 
+        int pageSize = 10;
+        if(    searchOptions.getPageSize() != null && searchOptions.getPageSize() > 0) {
+            pageSize = searchOptions.getPageSize();
+        }
+
+
+
+        return watchListDao.findAll(new WatchedTvSeriesSearchSpecification(searchOptions,username),PageRequest.of(page,pageSize)).map(TvSeriesEntityMapper::fromWatchListEntity);
     }
 
 
@@ -109,4 +129,6 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
         log.info("Removed Tv Series with id[{}] from users[{}] watch list  ",tvSeriesId,username);
         userDao.save(user);
     }
+
+
 }

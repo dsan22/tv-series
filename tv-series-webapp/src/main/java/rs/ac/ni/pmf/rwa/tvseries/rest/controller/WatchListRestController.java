@@ -2,12 +2,15 @@ package rs.ac.ni.pmf.rwa.tvseries.rest.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
+import org.springdoc.api.annotations.ParameterObject;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.WatchListService;
-import rs.ac.ni.pmf.rwa.tvseries.rest.dto.WatchedTvSeriesDTO;
+import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesWatchedDTO;
+import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesSearchOptionsDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.TvSeriesMapper;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.WatchedTvSeriesMapper;
@@ -38,14 +41,19 @@ public class WatchListRestController {
     }
 
     @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")
-    @GetMapping("/{username}/watch-list")
+    @GetMapping("/{username}/watch-list/")
     @ResponseStatus(HttpStatus.OK)
-    public List<TvSeriesWatchedDTO> getWatchList(
-            @PathVariable(name = "username")  String username
+    public Page<TvSeriesWatchedDTO> getWatchListSearch(
+            @PathVariable(name = "username")  String username,
+            @ParameterObject WatchedTvSeriesSearchOptionsDTO searchOptions
+
     )
     {
-        return watchListService.getTvSeriesByUsername(username).stream().map(tvSeriesMapper::toDtoWatched ).collect(Collectors.toList());
+        return watchListService.getTvSeriesByUsername(username,watchedTvSeriesMapper.fromDtoSearchOptions(searchOptions)).map(tvSeriesMapper::toDtoWatched);
     }
+
+
+
 
 
     @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")

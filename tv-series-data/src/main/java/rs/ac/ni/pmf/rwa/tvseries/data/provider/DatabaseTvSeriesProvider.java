@@ -77,7 +77,7 @@ public class DatabaseTvSeriesProvider implements TvSeriesProvider {
             pageSize = tvSeriesSearchOptions.getPageSize();
         }
 
-        tvSeriesDao.findAll(new TvSeriesSearchSpecification(tvSeriesSearchOptions),PageRequest.of(page,pageSize));
+        //tvSeriesDao.findAll(new TvSeriesSearchSpecification(tvSeriesSearchOptions),PageRequest.of(page,pageSize));
 
 
         return tvSeriesDao.findAll(new TvSeriesSearchSpecification(tvSeriesSearchOptions),PageRequest.of(page,pageSize))

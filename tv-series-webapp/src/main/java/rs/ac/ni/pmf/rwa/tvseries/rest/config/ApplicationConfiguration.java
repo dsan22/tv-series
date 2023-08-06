@@ -9,6 +9,7 @@ import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.WatchListService;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
+import rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.provider.DatabaseTvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.provider.DatabaseUserProvider;
@@ -46,8 +47,8 @@ public class ApplicationConfiguration
 	//WATCHLIST
 
 	@Bean
-	public WatchListProvider getWatchListProvider(final UserDao userDao,final TvSeriesDao tvSeriesDao){
-		return  new DatabaseWatchListProvider(userDao,tvSeriesDao);
+	public WatchListProvider getWatchListProvider(final UserDao userDao, final TvSeriesDao tvSeriesDao, final WatchListDao watchListDao){
+		return  new DatabaseWatchListProvider(userDao,tvSeriesDao,watchListDao);
 	}
 	@Bean
 	WatchListService watchListService(final UserProvider userProvider,final TvSeriesProvider tvSeriesProvider,final WatchListProvider watchListProvider){

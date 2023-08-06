@@ -27,9 +27,6 @@ public class TvSeriesSearchSpecification implements Specification<TvSeriesEntity
 
 
 
-       Expression<Double> avg= criteriaBuilder.avg(watchListJoin.get("rating"));
-
-
 
         Path<String> name=root.get("name");
         Path<Integer> numberOfEpisodes=root.get("numberOfEpisodes");

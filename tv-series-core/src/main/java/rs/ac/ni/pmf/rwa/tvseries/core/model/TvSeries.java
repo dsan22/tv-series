@@ -16,7 +16,7 @@ public class TvSeries {
     Integer numberOfEpisodes;
 
     Double averageRating;
-    Double usersRating;
+    Integer usersRating;
 
     Integer episodesWatched;
 }

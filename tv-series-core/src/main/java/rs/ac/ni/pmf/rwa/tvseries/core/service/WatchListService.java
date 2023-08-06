@@ -3,8 +3,10 @@ package rs.ac.ni.pmf.rwa.tvseries.core.service;
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
@@ -12,6 +14,7 @@ import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
 import rs.ac.ni.pmf.rwa.tvseries.exception.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -40,12 +43,12 @@ public class WatchListService {
         watchListProvider.addToWatchList(username, watchedTvSeries);
     }
 
-    public List<TvSeries> getTvSeriesByUsername(String username) {
 
+
+    public Page<TvSeries> getTvSeriesByUsername(String username, WatchTvSeriesSearchOptions searchOptions) {
         validateUser(username);
-
-        log.info("Getting all tvSeries on User[{}] watchlist ",username);
-        return watchListProvider.getTvSeriesByUsername(username);
+        log.info("Getting all TvSeries.");
+        return watchListProvider.getTvSeriesByUsername(username,searchOptions);
     }
 
     public TvSeries getTvSeriesOnWatchListById(String username, Integer tvSeriesId) {
@@ -110,4 +113,6 @@ public class WatchListService {
             throw new UnknownUserException(username);
         }
     }
+
+
 }

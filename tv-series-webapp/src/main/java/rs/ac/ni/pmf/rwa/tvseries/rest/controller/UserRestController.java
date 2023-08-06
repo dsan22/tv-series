@@ -7,7 +7,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
-import rs.ac.ni.pmf.rwa.tvseries.rest.dto.UserDTO;
+import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
 import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
@@ -63,7 +63,7 @@ public class UserRestController {
 
     @PutMapping("/users/grant-authority/{username}")
     @ResponseStatus(HttpStatus.CREATED)
-    public void grantUserAuthority(@RequestBody Roles authority, @PathVariable(value = "username") String username)
+    public void grantUserAuthority(@RequestBody  Roles authority, @PathVariable(value = "username") String username)
     {
         userService.grantAuthority(username, authority);
     }

@@ -19,4 +19,6 @@ public interface TvSeriesProvider {
     void updateTvSeries(TvSeries tvSeries);
 
     Page<TvSeries> getAllTvSeries(TvSeriesSearchOptions tvSeriesSearchOptions);
+
+
 }
