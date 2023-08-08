@@ -160,7 +160,6 @@ public class WatchListServiceIT {
 
     }
 
-//TODO fix tests for watchList service
 
     @Test
     public void shouldReturnWatchList() {
