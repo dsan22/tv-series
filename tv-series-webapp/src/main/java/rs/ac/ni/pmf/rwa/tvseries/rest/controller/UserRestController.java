@@ -77,7 +77,7 @@ public class UserRestController {
     {
         return userAccessMapper.toDto(userService.showUsersAccess(username)) ;
     }
-    //TODO addd endpoint to show user access
+
 
 
 }
