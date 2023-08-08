@@ -2,6 +2,7 @@ package rs.ac.ni.pmf.rwa.tvseries.core.provider;
 
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
 import java.util.List;
@@ -19,5 +20,8 @@ public interface UserProvider {
 
     void updateUser(User user,String username);
 
-    void grantAuthority(String username, Roles authority);
+
+    void manageUsersAccess(String username, UserAccess userAccess);
+
+    Optional<UserAccess> showUsersAccess(String username);
 }

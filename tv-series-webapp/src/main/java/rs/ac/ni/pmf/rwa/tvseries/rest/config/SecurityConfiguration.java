@@ -60,7 +60,8 @@ public class SecurityConfiguration {
                         .antMatchers(HttpMethod.POST, "/users"  ).anonymous()
                         .antMatchers(HttpMethod.DELETE, "/users/**"  ).hasAnyAuthority(ADMIN,USER)
                         .antMatchers(HttpMethod.PUT, "/users/**"  ).hasAnyAuthority(ADMIN,USER)
-                        .antMatchers(HttpMethod.PUT, "/users/grant-authority/**" ).hasAnyAuthority(ADMIN)
+                        .antMatchers(HttpMethod.PUT, "/users/**/manage-access" ).hasAnyAuthority(ADMIN)
+                        .antMatchers(HttpMethod.PUT, "/users/**/show-access" ).hasAnyAuthority(ADMIN)
 
                         .antMatchers(HttpMethod.GET, "/**/watch-list/**"  ).hasAnyAuthority(ADMIN,USER)
                         .antMatchers(HttpMethod.GET, "/**/watch-list"  ).hasAnyAuthority(ADMIN,USER)

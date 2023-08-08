@@ -7,7 +7,9 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
+import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserAccessDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserDTO;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserAccessMapper;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
 import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
@@ -22,6 +24,7 @@ public class UserRestController {
     private final UserService userService;
 
     private final UserMapper userMapper;
+    private final UserAccessMapper userAccessMapper;
     @GetMapping("/users")
     public List<UserDTO> getAllUsers()
     {
@@ -61,12 +64,20 @@ public class UserRestController {
     }
 
 
-    @PutMapping("/users/grant-authority/{username}")
+    @PutMapping("/users/{username}/manage-access")
     @ResponseStatus(HttpStatus.CREATED)
-    public void grantUserAuthority(@RequestBody  Roles authority, @PathVariable(value = "username") String username)
+    public void manageUsersAccess(@RequestBody UserAccessDTO userAccessDTO, @PathVariable(value = "username") String username)
     {
-        userService.grantAuthority(username, authority);
+        userService.manageUsersAccess(username,userAccessMapper.fromDto(userAccessDTO) );
     }
+
+    @GetMapping("/users/{username}/show-access")
+    @ResponseStatus(HttpStatus.OK)
+    public UserAccessDTO showUsersAccess( @PathVariable(value = "username") String username)
+    {
+        return userAccessMapper.toDto(userService.showUsersAccess(username)) ;
+    }
+    //TODO addd endpoint to show user access
 
 
 }

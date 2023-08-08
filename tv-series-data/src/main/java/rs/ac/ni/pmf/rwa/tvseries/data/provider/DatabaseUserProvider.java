@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
@@ -50,7 +51,7 @@ public class DatabaseUserProvider implements UserProvider {
     @Override
     public void saveUser(User user) {
         UserEntity entity=UserEntityMapper.toEntity(user);
-        entity.setRole(Roles.USER);
+       // entity.setRole(Roles.USER);
         log.info("Saved User");
         userDao.save(entity);
     }
@@ -72,9 +73,28 @@ public class DatabaseUserProvider implements UserProvider {
     }
 
     @Override
-    public void grantAuthority(String username, Roles authority) {
+    public void manageUsersAccess(String username, UserAccess userAccess) {
         UserEntity user=userDao.findByUsername(username).orElseThrow(()->new UnknownUserException(username));
-        user.setRole(authority);
+        user.setRole(userAccess.getRole());
+        user.setAccountNonExpired(userAccess.isAccountNonExpired());
+        user.setAccountNonLocked(userAccess.isAccountNonLocked());
+        user.setCredentialsNonExpired(userAccess.isCredentialsNonExpired());
+        user.setEnabled(userAccess.isEnabled());
         userDao.save(user);
     }
+
+    @Override
+    public Optional<UserAccess> showUsersAccess(String username) {
+        Optional<UserEntity> optionalUserEntity=userDao.findByUsername(username);
+
+        if(optionalUserEntity.isEmpty()){
+            log.info("User with username[{}] is not founded",username);
+            return Optional.empty();
+        }
+        UserEntity userEntity=optionalUserEntity.get();
+
+        return Optional.of(UserEntityMapper.accessFromEntity(userEntity));
+    }
+
+
 }

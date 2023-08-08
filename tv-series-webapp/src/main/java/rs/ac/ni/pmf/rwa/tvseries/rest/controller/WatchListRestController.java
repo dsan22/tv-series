@@ -40,7 +40,7 @@ public class WatchListRestController {
         watchListService.addToWatchList(username,watchedTvSeriesMapper.fromDto(watchedTvSeriesDTO));
     }
 
-    @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")
+    @PreAuthorize("#username == authentication.name || authentication.authorities.contains('ADMIN')")
     @GetMapping("/{username}/watch-list/")
     @ResponseStatus(HttpStatus.OK)
     public Page<TvSeriesWatchedDTO> getWatchListSearch(

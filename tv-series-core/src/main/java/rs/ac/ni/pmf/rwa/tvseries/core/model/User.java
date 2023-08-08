@@ -3,6 +3,7 @@ package rs.ac.ni.pmf.rwa.tvseries.core.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
+import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
 @Value
 @AllArgsConstructor
@@ -10,5 +11,8 @@ import lombok.Value;
 public class User {
     String username;
     String password;
-    String role;
+
+    @Builder.Default
+    UserAccess userAccess=UserAccess.builder().build();
+
 }

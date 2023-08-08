@@ -4,6 +4,7 @@ package rs.ac.ni.pmf.rwa.tvseries.rest.mapper;
 import org.springframework.stereotype.Component;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 
+import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserDTO;
 
 @Component
@@ -23,4 +24,6 @@ public class UserMapper {
                 .password(dto.getPassword())
                 .build();
     }
+
+
 }

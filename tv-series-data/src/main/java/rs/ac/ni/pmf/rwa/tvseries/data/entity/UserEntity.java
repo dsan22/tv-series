@@ -31,5 +31,15 @@ public class UserEntity {
     Roles role;
 
 
+    @Builder.Default
+    boolean accountNonExpired=true;
+    @Builder.Default
+    boolean accountNonLocked=true;
+    @Builder.Default
+    boolean credentialsNonExpired=true;
+    @Builder.Default
+    boolean enabled=true;
+
+
 
 }

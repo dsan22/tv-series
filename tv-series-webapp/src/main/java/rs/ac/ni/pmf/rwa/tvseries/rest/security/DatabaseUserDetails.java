@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.Collections;
 
 @RequiredArgsConstructor
-public class DatabaseUserDetails  implements UserDetails {
+public class DatabaseUserDetails implements UserDetails {
 
     private final UserEntity user;
     private final PasswordEncoder passwordEncoder;
@@ -19,36 +19,36 @@ public class DatabaseUserDetails  implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.singleton(new SimpleGrantedAuthority("USER"));
+        return Collections.singleton(new SimpleGrantedAuthority(user.getRole().name()));
     }
 
     @Override
     public String getPassword() {
-     return   passwordEncoder.encode(user.getPassword()) ;
+        return passwordEncoder.encode(user.getPassword());
     }
 
     @Override
     public String getUsername() {
-       return user.getUsername();
+        return user.getUsername();
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return user.isAccountNonExpired();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return user.isAccountNonLocked();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+        return user.isCredentialsNonExpired();
     }
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return user.isEnabled();
     }
 }

@@ -3,6 +3,7 @@ package rs.ac.ni.pmf.rwa.tvseries.core.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateUserException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownAuthorityException;
@@ -12,6 +13,7 @@ import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 import javax.management.BadAttributeValueExpException;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -79,16 +81,33 @@ public class UserService {
     }
 
 
-    public void grantAuthority(String username, Roles authority) {
-//        if(!Objects.equals(authority, "ADMIN")){
-//            throw new UnknownAuthorityException(authority);
+//    public void grantAuthority(String username, Roles authority) {
+//        if(userProvider.getUserByUsername(username).isEmpty()){
+//            log.warn("Error granting authority to User: User with username[{}] dose not exists",username);
+//            throw new UnknownUserException(username);
 //        }
+//
+//        log.info("Granting  User authority of '{}'",authority);
+//        userProvider.grantAuthority(username,authority);
+//    }
+
+    public void manageUsersAccess(String username, UserAccess userAccess) {
         if(userProvider.getUserByUsername(username).isEmpty()){
             log.warn("Error granting authority to User: User with username[{}] dose not exists",username);
             throw new UnknownUserException(username);
         }
 
-        log.info("Granting  User authority of '{}'",authority);
-        userProvider.grantAuthority(username,authority);
+        log.info("Managing  User '{}' access  ",username);
+        userProvider.manageUsersAccess(username,userAccess);
+    }
+
+
+    public UserAccess showUsersAccess(String username) {
+        if(userProvider.getUserByUsername(username).isEmpty()){
+            log.warn("Error granting authority to User: User with username[{}] dose not exists",username);
+            throw new UnknownUserException(username);
+        }
+        log.info("Getting  User '{}' access  ",username);
+        return userProvider.showUsersAccess(username).orElseThrow( () -> new UnknownUserException(username));
     }
 }
