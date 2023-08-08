@@ -7150,3 +7150,6 @@ Consider defining a bean of type 'rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDa
 2023-08-08 21:31:56.538 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.core.service.UserService - Getting  User 'admin' access  
 2023-08-08 21:32:22.317 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [userNew]
 2023-08-08 21:32:22.317 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.core.service.UserService - Getting  User 'userNew' access  
+2023-08-08 21:33:33.190 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-08 21:33:33.193 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-08 21:33:33.196 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

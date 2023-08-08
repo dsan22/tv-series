@@ -11,7 +11,6 @@ import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserAccessDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserAccessMapper;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
-import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -75,7 +74,7 @@ public class UserRestController {
     @ResponseStatus(HttpStatus.OK)
     public UserAccessDTO showUsersAccess( @PathVariable(value = "username") String username)
     {
-        return userAccessMapper.toDto(userService.showUsersAccess(username)) ;
+        return userAccessMapper.toDto(userService.getUsersAccess(username)) ;
     }
 
 

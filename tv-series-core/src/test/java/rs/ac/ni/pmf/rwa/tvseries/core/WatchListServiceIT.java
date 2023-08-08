@@ -6,8 +6,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
@@ -159,35 +161,39 @@ public class WatchListServiceIT {
     }
 
 //TODO fix tests for watchList service
-    /*
+
     @Test
     public void shouldReturnWatchList() {
         String username = "username";
         User user = mock(User.class);
         when(userProvider.getUserByUsername(username)).thenReturn(Optional.of(user));
 
-        List<TvSeries> expectedList = mock(List.class);
-        when(watchListProvider.getTvSeriesByUsername(username)).thenReturn(expectedList);
+        WatchTvSeriesSearchOptions searchOptions =mock(WatchTvSeriesSearchOptions.class);
 
-        List<TvSeries> actualList = watchListService.getTvSeriesByUsername(username);
+        Page<TvSeries> expectedPage = mock(Page.class);
+        when(watchListProvider.getTvSeriesByUsername(username,searchOptions))
+                .thenReturn(expectedPage);
 
-        assertThat(actualList).isEqualTo(expectedList);
+        Page<TvSeries> actualPage = watchListService.getTvSeriesByUsername(username,searchOptions);
+
+        assertThat(actualPage).isEqualTo(expectedPage);
 
 
-    }*/
-/*
+    }
+
     @Test
     public void shouldThrowWhenReturnWatchList() {
         String username = "username";
+        WatchTvSeriesSearchOptions searchOptions =mock(WatchTvSeriesSearchOptions.class);
         when(userProvider.getUserByUsername(username)).thenReturn(Optional.empty());
 
 
-        assertThatThrownBy(() -> watchListService.getTvSeriesByUsername(username))
+        assertThatThrownBy(() -> watchListService.getTvSeriesByUsername(username,searchOptions))
                 .isInstanceOf(UnknownUserException.class);
 
 
     }
-*/
+
 
     @Test
     public void shouldReturnTvSeriesOnWatchList() {

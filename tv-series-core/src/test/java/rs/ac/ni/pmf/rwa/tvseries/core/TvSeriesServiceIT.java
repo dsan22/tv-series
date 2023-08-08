@@ -5,6 +5,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
@@ -47,20 +49,30 @@ public class TvSeriesServiceIT {
 
     }
 
-    //TODO fix test for GetAll function
-   /* @Test
-    public void shouldGetAllTvSeries( ){
-        int pageNumber=0;
-        String searchKey="";
-        final List<TvSeries> expectedTvSeries = mock(List.class);
-        when(tvSeriesProvider.getAllTvSeries(searchKey,pageNumber))
-                .thenReturn(expectedTvSeries);
 
-        final List<TvSeries> actualTvSeries = tvSeriesService.getAllTvSeries(searchKey,pageNumber);
+//    @Test
+//    public void shouldGetAllTvSeries( ){
+//        int pageNumber=0;
+//        String searchKey="";
+//        final List<TvSeries> expectedTvSeries = mock(List.class);
+//        when(tvSeriesProvider.getAllTvSeries(searchKey,pageNumber))
+//                .thenReturn(expectedTvSeries);
+//
+//        final List<TvSeries> actualTvSeries = tvSeriesService.getAllTvSeries(searchKey,pageNumber);
+//
+//        assertThat(actualTvSeries).isEqualTo(expectedTvSeries);
+//
+//    }
+
+    @Test
+    public void shouldGetAllTvSeries( ){
+        final TvSeriesSearchOptions searchOptions = mock(TvSeriesSearchOptions.class);
+        final Page<TvSeries> expectedTvSeries = mock(Page.class);
+        when(tvSeriesProvider.getAllTvSeries(searchOptions)).thenReturn(expectedTvSeries);
+        final Page<TvSeries> actualTvSeries = tvSeriesService.getAllTvSeries(searchOptions);
 
         assertThat(actualTvSeries).isEqualTo(expectedTvSeries);
-
-    }*/
+    }
 
     @Test
     public void shouldCreateTvSeries(){
@@ -180,6 +192,7 @@ public class TvSeriesServiceIT {
        assertThatThrownBy(() -> tvSeriesService.delete(id))
                .isInstanceOf(UnknownTvSeriesException.class);
     }
+
 
 
 

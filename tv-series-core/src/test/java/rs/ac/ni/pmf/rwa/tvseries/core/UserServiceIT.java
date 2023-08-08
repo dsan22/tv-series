@@ -4,14 +4,13 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
-import rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateIdException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateUserException;
-import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownTvSeriesException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownUserException;
 
 import java.util.List;
@@ -69,7 +68,7 @@ public class UserServiceIT {
 
     @Test
     public void shouldCreateUser(){
-        final String username="username",password="password";
+        final String username="username";
 
         final User user=mock(User.class);
         when(user.getUsername()).thenReturn(username);
@@ -82,7 +81,7 @@ public class UserServiceIT {
     }
 
     @Test
-    public void shouldThrowWhenCreateTvSeries() {
+    public void shouldThrowWhenCreateUser() {
 
 
         final String username = "username";
@@ -97,7 +96,7 @@ public class UserServiceIT {
     }
 
     @Test
-    public void shouldUpdateTvSeries(){
+    public void shouldUpdateUser(){
         final String username="username";
         final User user=mock(User.class);
         when(user.getUsername()).thenReturn(username);
@@ -106,7 +105,7 @@ public class UserServiceIT {
         userService.update(user,username);
         verify(userProvider).updateUser(user,username);
 
-        /*Should remove user if different username is passed*/
+        /*When different Username is passed*/
 
         String username2="username";
         final  User user2 =mock(User.class);
@@ -162,11 +161,67 @@ public class UserServiceIT {
     @Test
     public void shouldThrowWhenDeleteUser(){
         final String username="username";
-        final User user=mock(User.class);
         when(userProvider.getUserByUsername(username)).thenReturn(Optional.empty());
 
         assertThatThrownBy(() -> userService.delete(username))
                 .isInstanceOf(UnknownUserException.class);
     }
+
+    @Test
+    public void shouldUpdateUserAccess(){
+        final String username="username";
+        final User user=mock(User.class);
+        final UserAccess userAccess=mock(UserAccess.class);
+        when(userProvider.getUserByUsername(username)).thenReturn(Optional.of(user));
+
+        userService.manageUsersAccess(username,userAccess);
+        verify(userProvider).manageUsersAccess(username,userAccess);
+
+    }
+
+    @Test
+    public void shouldThrowWhenUpdateUserAccess(){
+        final String username="username";
+        final UserAccess userAccess=mock(UserAccess.class);
+        when(userProvider.getUserByUsername(username)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> userService.manageUsersAccess(username,userAccess))
+                .isInstanceOf(UnknownUserException.class)
+                .hasMessage("Unknown User with username 'username'");
+
+    }
+
+    @Test
+    public void shouldGetUserAccessByUsername( ){
+        String username="username";
+        final UserAccess expectedUserAccess = mock(UserAccess.class);
+
+        final User user=mock(User.class);
+        when(userProvider.getUserByUsername(username)).thenReturn(Optional.of(user));
+
+        when(userProvider.showUsersAccess("username"))
+                .thenReturn(Optional.of(expectedUserAccess));
+
+        final UserAccess actualUserAccess = userService.getUsersAccess("username");
+
+        assertThat(actualUserAccess).isEqualTo(expectedUserAccess);
+
+    }
+
+    @Test
+    public void shouldThrowWhenGetUserAccessByUsername(){
+        final String username="username";
+        when(userProvider.getUserByUsername(username)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> userService.getUsersAccess(username))
+                .isInstanceOf(UnknownUserException.class)
+                .hasMessage("Unknown User with username 'username'");
+
+    }
+
+
+
+
+
 
 }
