@@ -14,9 +14,4 @@ import java.util.List;
 
 public interface TvSeriesDao extends JpaRepository<TvSeriesEntity,Integer>, JpaSpecificationExecutor<TvSeriesEntity> {
 
-    public List<TvSeriesEntity> findByNameContainingIgnoreCase(String key, Pageable pageable);
-
-   // Page<TvSeriesEntity> findAll(@Nullable TvSeriesSearchSpecification tvSeriesSearchSpecification, PageRequest of);
-
-
 }

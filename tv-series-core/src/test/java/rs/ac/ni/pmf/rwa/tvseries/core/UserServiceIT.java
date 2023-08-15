@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
@@ -199,7 +198,7 @@ public class UserServiceIT {
         final User user=mock(User.class);
         when(userProvider.getUserByUsername(username)).thenReturn(Optional.of(user));
 
-        when(userProvider.showUsersAccess("username"))
+        when(userProvider.getUsersAccess("username"))
                 .thenReturn(Optional.of(expectedUserAccess));
 
         final UserAccess actualUserAccess = userService.getUsersAccess("username");

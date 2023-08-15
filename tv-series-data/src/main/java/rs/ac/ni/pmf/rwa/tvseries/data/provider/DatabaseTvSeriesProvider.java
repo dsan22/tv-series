@@ -22,7 +22,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class DatabaseTvSeriesProvider implements TvSeriesProvider {
 
-    private final Integer pageSize=10;
     private final TvSeriesDao tvSeriesDao;
     @Override
     public Optional<TvSeries> getTvSeriesById(Integer id) {
@@ -77,7 +76,6 @@ public class DatabaseTvSeriesProvider implements TvSeriesProvider {
             pageSize = tvSeriesSearchOptions.getPageSize();
         }
 
-        //tvSeriesDao.findAll(new TvSeriesSearchSpecification(tvSeriesSearchOptions),PageRequest.of(page,pageSize));
 
 
         return tvSeriesDao.findAll(new TvSeriesSearchSpecification(tvSeriesSearchOptions),PageRequest.of(page,pageSize))

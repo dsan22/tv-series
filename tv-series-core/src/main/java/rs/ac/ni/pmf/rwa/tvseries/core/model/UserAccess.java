@@ -2,10 +2,11 @@ package rs.ac.ni.pmf.rwa.tvseries.core.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Value;
 import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
-@Value
+@Data
 @AllArgsConstructor
 @Builder
 public class UserAccess {

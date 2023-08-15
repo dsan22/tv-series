@@ -51,7 +51,6 @@ public class DatabaseUserProvider implements UserProvider {
     @Override
     public void saveUser(User user) {
         UserEntity entity=UserEntityMapper.toEntity(user);
-       // entity.setRole(Roles.USER);
         log.info("Saved User");
         userDao.save(entity);
     }
@@ -84,7 +83,7 @@ public class DatabaseUserProvider implements UserProvider {
     }
 
     @Override
-    public Optional<UserAccess> showUsersAccess(String username) {
+    public Optional<UserAccess> getUsersAccess(String username) {
         Optional<UserEntity> optionalUserEntity=userDao.findByUsername(username);
 
         if(optionalUserEntity.isEmpty()){

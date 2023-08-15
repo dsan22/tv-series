@@ -87,6 +87,6 @@ public class UserService {
             throw new UnknownUserException(username);
         }
         log.info("Getting  User '{}' access  ", username);
-        return userProvider.showUsersAccess(username).orElseThrow(() -> new UnknownUserException(username));
+        return userProvider.getUsersAccess(username).orElseThrow(() -> new UnknownUserException(username));
     }
 }

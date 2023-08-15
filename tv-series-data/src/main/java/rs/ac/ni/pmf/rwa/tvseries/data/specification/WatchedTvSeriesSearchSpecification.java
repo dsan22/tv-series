@@ -27,7 +27,7 @@ public class WatchedTvSeriesSearchSpecification implements Specification<WatchLi
 
         Join< WatchListEntity, TvSeriesEntity> tvSeriesJoin=root.join("tvSeries",JoinType.LEFT);
         Join<WatchListEntity, UserEntity> userJoin=root.join("user",JoinType.LEFT);
-//
+
 
         Path<String> name=tvSeriesJoin.get("name");
         Path<String> username=userJoin.get("username");
