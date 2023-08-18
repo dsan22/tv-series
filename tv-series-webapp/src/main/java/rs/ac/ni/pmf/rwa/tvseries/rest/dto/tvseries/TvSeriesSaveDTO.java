@@ -13,6 +13,7 @@ public class TvSeriesSaveDTO {
 
     @Schema(description = "Tv Series name", example = "Game of Thrones",defaultValue  = "Game of Thrones")
     String name;
+
     @Schema(description = "Number of episodes Tv Series have", example = "10",defaultValue = "10")
     Integer numberOfEpisodes;
 }

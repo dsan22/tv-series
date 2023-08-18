@@ -3,7 +3,6 @@ package rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Builder;
 import lombok.Value;
-import rs.ac.ni.pmf.rwa.tvseries.shared.TvSeriesSortByField;
 
 @Value
 @Builder

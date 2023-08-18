@@ -21,15 +21,11 @@ public class TvSeriesSearchSpecification implements Specification<TvSeriesEntity
     public Predicate toPredicate(Root<TvSeriesEntity> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         List<Predicate> predicateList=new ArrayList<>();
 
-
-
         Join<TvSeriesEntity,WatchListEntity> watchListJoin=root.join("usersWatched",JoinType.LEFT);
-
-
-
 
         Path<String> name=root.get("name");
         Path<Integer> numberOfEpisodes=root.get("numberOfEpisodes");
+
 
         if(searchOptions.getMaxNumberOfEpisodes()!=null){
             predicateList.add(criteriaBuilder.le(numberOfEpisodes,searchOptions.getMaxNumberOfEpisodes()));
@@ -65,8 +61,6 @@ public class TvSeriesSearchSpecification implements Specification<TvSeriesEntity
             String param="%"+searchOptions.getTitleSearch()+"%";
             predicateList.add(criteriaBuilder.like(name,param));
         }
-
-
 
         TvSeriesSortByField sortBy = searchOptions.getSortBy();
         if(sortBy != null) {

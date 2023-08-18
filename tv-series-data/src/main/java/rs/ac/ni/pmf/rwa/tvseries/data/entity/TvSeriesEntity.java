@@ -2,7 +2,6 @@ package rs.ac.ni.pmf.rwa.tvseries.data.entity;
 
 
 import lombok.*;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 
 import javax.persistence.*;
 import java.util.List;
@@ -24,6 +23,19 @@ public class TvSeriesEntity {
     Integer numberOfEpisodes;
     @OneToMany(mappedBy = "tvSeries",cascade = CascadeType.ALL, orphanRemoval = true)
     List<WatchListEntity> usersWatched;
+
+    @Transient
+    Double averageRating;
+
+    @PostLoad
+    public void calculateRating()
+    {
+         averageRating= usersWatched.stream()
+                .mapToInt( WatchListEntity::getRating)
+                .average()
+                .orElse(0.0d);
+    }
+
 
 
 

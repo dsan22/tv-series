@@ -2,7 +2,6 @@ package rs.ac.ni.pmf.rwa.tvseries.rest.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -12,21 +11,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
-import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.ErrorCode;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.ErrorDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.security.DatabaseUserDetailsService;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 @EnableGlobalMethodSecurity(prePostEnabled=true)
@@ -68,8 +60,6 @@ public class SecurityConfiguration {
                         .antMatchers(HttpMethod.POST, "/**/watch-list"  ).hasAnyAuthority(USER)
                         .antMatchers(HttpMethod.DELETE, "/**/watch-list/**"  ).hasAnyAuthority(ADMIN,USER)
                         .antMatchers(HttpMethod.PUT, "/**/watch-list/**"  ).hasAnyAuthority(ADMIN,USER)
-
-
 
                         .anyRequest().denyAll()
                 )

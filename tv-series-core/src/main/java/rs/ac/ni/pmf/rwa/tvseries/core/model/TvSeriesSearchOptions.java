@@ -12,26 +12,14 @@ import rs.ac.ni.pmf.rwa.tvseries.shared.TvSeriesSortByField;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TvSeriesSearchOptions {
-
     Integer page;
     Integer pageSize;
     String titleSearch;
-
     Integer maxNumberOfEpisodes;
     Integer minNumberOfEpisodes;
-
     Double maxRating;
-
     Double minRating;
-
     TvSeriesSortByField sortBy;
-
     Sort.Direction sortDirection;
-
-
-
-
-
-
 
 }

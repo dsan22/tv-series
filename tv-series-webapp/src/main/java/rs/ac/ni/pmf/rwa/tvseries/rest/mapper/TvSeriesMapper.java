@@ -20,24 +20,8 @@ public class TvSeriesMapper {
                 .build();
     }
 
-    public TvSeries fromDto(final TvSeriesDTO dto)
-    {
-        return TvSeries.builder()
-                .id(dto.getId())
-                .name(dto.getName())
-                .numberOfEpisodes(dto.getNumberOfEpisodes())
-                .averageRating(dto.getAverageRating())
-                .build();
-    }
 
-    public TvSeriesSaveDTO toDtoSave(final TvSeries tvSeries)
-    {
-        return TvSeriesSaveDTO.builder()
-                .id(tvSeries.getId())
-                .name(tvSeries.getName())
-                .numberOfEpisodes(tvSeries.getNumberOfEpisodes())
-                .build();
-    }
+
 
     public TvSeries fromDtoSave(final TvSeriesSaveDTO dto)
     {
@@ -60,16 +44,7 @@ public class TvSeriesMapper {
                 .build();
     }
 
-    public TvSeries fromDtoWatched(final TvSeriesWatchedDTO dto)
-    {
-        return TvSeries.builder()
-                .id(dto.getId())
-                .name(dto.getName())
-                .numberOfEpisodes(dto.getNumberOfEpisodes())
-                .usersRating(dto.getUsersRating())
-                .episodesWatched(dto.getEpisodesWatched())
-                .build();
-    }
+
 
     public TvSeriesSearchOptions fromDtoSearchOptions (TvSeriesSearchOptionsDTO dto)
     {

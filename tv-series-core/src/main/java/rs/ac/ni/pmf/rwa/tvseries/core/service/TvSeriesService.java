@@ -9,31 +9,24 @@ import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateIdException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownTvSeriesException;
 
-
-import java.util.List;
-
 @Slf4j
 @RequiredArgsConstructor
 public class TvSeriesService {
     private final TvSeriesProvider tvSeriesProvider;
 
     public Page<TvSeries> getAllTvSeries(TvSeriesSearchOptions tvSeriesSearchOptions) {
-
         log.info("Getting all TvSeries.");
         return tvSeriesProvider.getAllTvSeries(tvSeriesSearchOptions);
-
     }
+
     public TvSeries getTvSeriesById(Integer id){
         log.info("Getting TvSeries with id [{}] .",id);
         return tvSeriesProvider.getTvSeriesById(id).orElseThrow( () -> new UnknownTvSeriesException(id));
     }
 
-
-
     public void createTvSeries(final TvSeries tvSeries)
     {
         final Integer id = tvSeries.getId();
-
 
         if (id!=null && tvSeriesProvider.getTvSeriesById(id).isPresent())
         {
@@ -53,6 +46,7 @@ public class TvSeriesService {
 
     public void update(final TvSeries tvSeries, final Integer id){
         final Integer newId = tvSeries.getId();
+
         if(!id.equals(newId)){
             log.warn("Error updating Tv Series: ids doesnt match ({}!={})",id,newId);
             throw new IllegalArgumentException("Id of tv series cannot be changed");
@@ -73,9 +67,5 @@ public class TvSeriesService {
         }
         log.info("Updating Tv Series with id[{}]",id);
         tvSeriesProvider.removeTvSeries(id);
-
     }
-
-
-
 }

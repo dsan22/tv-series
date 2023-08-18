@@ -1,9 +1,7 @@
 package rs.ac.ni.pmf.rwa.tvseries.data.mapper;
 
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
-import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 
 public class UserEntityMapper {
@@ -15,14 +13,13 @@ public class UserEntityMapper {
                 .username(entity.getUsername())
                 .password(entity.getPassword())
                 .userAccess(
-                        UserAccess
-                                .builder()
-                                .accountNonExpired(entity.isAccountNonExpired())
-                                .accountNonLocked(entity.isAccountNonLocked())
-                                .credentialsNonExpired(entity.isCredentialsNonExpired())
-                                .enabled(entity.isEnabled())
-                                .role(entity.getRole())
-                                .build()
+                        UserAccess.builder()
+                            .accountNonExpired(entity.isAccountNonExpired())
+                            .accountNonLocked(entity.isAccountNonLocked())
+                            .credentialsNonExpired(entity.isCredentialsNonExpired())
+                            .enabled(entity.isEnabled())
+                            .role(entity.getRole())
+                            .build()
                 )
                 .build();
     }
@@ -42,8 +39,7 @@ public class UserEntityMapper {
 
     public static UserAccess accessFromEntity(final UserEntity entity)
     {
-        return UserAccess
-                .builder()
+        return UserAccess.builder()
                 .accountNonExpired(entity.isAccountNonExpired())
                 .accountNonLocked(entity.isAccountNonLocked())
                 .credentialsNonExpired(entity.isCredentialsNonExpired())

@@ -14,11 +14,9 @@ import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
-import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.WatchListService;
 import rs.ac.ni.pmf.rwa.tvseries.exception.*;
 
-import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;

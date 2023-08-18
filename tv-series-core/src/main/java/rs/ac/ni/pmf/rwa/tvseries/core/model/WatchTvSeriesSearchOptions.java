@@ -12,23 +12,13 @@ import rs.ac.ni.pmf.rwa.tvseries.shared.WatchedTvSeriesSortByField;
 @AllArgsConstructor
 @NoArgsConstructor
 public class WatchTvSeriesSearchOptions {
-
-
     Integer page;
-
     Integer pageSize;
-
     @Builder.Default
     boolean showUnfinishedTvSeries=false;
-
     @Builder.Default
     boolean showFinishedTvSeries=false;
-
     String titleSearch;
-
-
     WatchedTvSeriesSortByField sortBy;
-
-
     Sort.Direction sortDirection;
 }

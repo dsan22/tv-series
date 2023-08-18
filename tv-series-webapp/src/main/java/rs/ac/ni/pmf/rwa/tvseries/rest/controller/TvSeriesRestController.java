@@ -1,25 +1,17 @@
 package rs.ac.ni.pmf.rwa.tvseries.rest.controller;
 
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
-import io.swagger.v3.oas.annotations.security.SecurityRequirements;
 import lombok.RequiredArgsConstructor;
 import org.springdoc.api.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
-import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
+import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesSaveDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesSearchOptionsDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.TvSeriesMapper;
-
-import javax.persistence.criteria.CriteriaBuilder;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @SecurityRequirement(name = "default")
 @RestController
@@ -30,19 +22,11 @@ public class TvSeriesRestController {
     private final TvSeriesMapper tvSeriesMapper;
 
 
-
-
-
-
     @GetMapping("/tv-series")
-    public Page<TvSeriesDTO> getAllTvSeries(
-            @ParameterObject TvSeriesSearchOptionsDTO tvSeriesSearchOptions
-            )
+    public Page<TvSeriesDTO> getAllTvSeries(@ParameterObject TvSeriesSearchOptionsDTO tvSeriesSearchOptions)
     {
         return tvSeriesService.getAllTvSeries(tvSeriesMapper.fromDtoSearchOptions(tvSeriesSearchOptions)).map(tvSeriesMapper::toDto);
-
     }
-
 
     @GetMapping("/tv-series/{id}")
     public TvSeriesDTO getTvSeriesById(@PathVariable(name = "id") final Integer id)
@@ -55,7 +39,6 @@ public class TvSeriesRestController {
     @ResponseStatus(HttpStatus.CREATED)
     public void createTvSeries(@RequestBody final TvSeriesSaveDTO tvSeriesDTO)
     {
-
         tvSeriesService.createTvSeries(tvSeriesMapper.fromDtoSave(tvSeriesDTO));
     }
 
@@ -73,7 +56,7 @@ public class TvSeriesRestController {
     }
 
 
-
+//ENDPOINT for initializing tv series data in database
 //    @PostMapping("/tv-series/create-from-file")
 //    @ResponseStatus(HttpStatus.CREATED)
 //    public void createTvSeriesFromFile()

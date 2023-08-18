@@ -18,7 +18,6 @@ public interface UserProvider {
 
     void updateUser(User user,String username);
 
-
     void manageUsersAccess(String username, UserAccess userAccess);
 
     Optional<UserAccess> getUsersAccess(String username);

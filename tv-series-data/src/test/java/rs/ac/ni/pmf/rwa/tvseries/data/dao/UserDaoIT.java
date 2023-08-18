@@ -7,9 +7,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import rs.ac.ni.pmf.rwa.tvseries.data.TestConfiguration;
-import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
-import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
 import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
 import java.util.Arrays;

@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
@@ -16,16 +15,11 @@ import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.mapper.TvSeriesEntityMapper;
-import rs.ac.ni.pmf.rwa.tvseries.data.specification.TvSeriesSearchSpecification;
 import rs.ac.ni.pmf.rwa.tvseries.data.specification.WatchedTvSeriesSearchSpecification;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownTvSeriesException;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownUserException;
 
-import javax.persistence.criteria.CriteriaBuilder;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 @Slf4j
 @RequiredArgsConstructor
 public class DatabaseWatchListProvider  implements WatchListProvider {
@@ -76,9 +70,11 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
             pageSize = searchOptions.getPageSize();
         }
 
+        return watchListDao.findAll(
+                new WatchedTvSeriesSearchSpecification(searchOptions,username),
+                PageRequest.of(page,pageSize)
+                ).map(TvSeriesEntityMapper::fromWatchListEntity);
 
-
-        return watchListDao.findAll(new WatchedTvSeriesSearchSpecification(searchOptions,username),PageRequest.of(page,pageSize)).map(TvSeriesEntityMapper::fromWatchListEntity);
     }
 
 

@@ -7,7 +7,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.*;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
+import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDao;
@@ -15,17 +17,13 @@ import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.mapper.TvSeriesEntityMapper;
-import rs.ac.ni.pmf.rwa.tvseries.data.mapper.UserEntityMapper;
-import rs.ac.ni.pmf.rwa.tvseries.data.specification.TvSeriesSearchSpecification;
 import rs.ac.ni.pmf.rwa.tvseries.data.specification.WatchedTvSeriesSearchSpecification;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.setRemoveAssertJRelatedElementsFromStackTrace;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)

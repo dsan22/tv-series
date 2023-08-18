@@ -1,20 +1,15 @@
 package rs.ac.ni.pmf.rwa.tvseries.core.service;
 
 import lombok.RequiredArgsConstructor;
-import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
 import rs.ac.ni.pmf.rwa.tvseries.exception.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -42,8 +37,6 @@ public class WatchListService {
         log.info("Tv Series with id[{}] successfully added to user[{}] Watch List  ",tvSeriesId,username);
         watchListProvider.addToWatchList(username, watchedTvSeries);
     }
-
-
 
     public Page<TvSeries> getTvSeriesByUsername(String username, WatchTvSeriesSearchOptions searchOptions) {
         validateUser(username);
@@ -79,6 +72,7 @@ public class WatchListService {
     }
 
     public void delete(String username, Integer tvSeriesId) {
+
         validateUser(username);
 
         if (watchListProvider.getTvSeriesOnWatchListById(username, tvSeriesId).isEmpty()) {

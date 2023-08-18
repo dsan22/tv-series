@@ -14,12 +14,9 @@ import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.specification.TvSeriesSearchSpecification;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

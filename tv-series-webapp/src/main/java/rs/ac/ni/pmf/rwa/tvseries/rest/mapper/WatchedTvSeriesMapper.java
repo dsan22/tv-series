@@ -1,24 +1,15 @@
 package rs.ac.ni.pmf.rwa.tvseries.rest.mapper;
 
 import org.springframework.stereotype.Component;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
-import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesSearchOptionsDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesSearchOptionsDTO;
 
 @Component
 public class WatchedTvSeriesMapper {
 
-    public WatchedTvSeriesDTO toDto(final WatchedTvSeries watchedTvSeries)
-    {
-        return WatchedTvSeriesDTO.builder()
-                .tvSeriesId(watchedTvSeries.getTvSeriesId())
-                .rating(watchedTvSeries.getRating())
-                .episodesWatched(watchedTvSeries.getEpisodesWatched())
-                .build();
-    }
+
 
     public WatchedTvSeries fromDto(final WatchedTvSeriesDTO dto)
     {
@@ -28,7 +19,6 @@ public class WatchedTvSeriesMapper {
                 .episodesWatched(dto.getEpisodesWatched())
                 .build();
     }
-
 
     public WatchTvSeriesSearchOptions fromDtoSearchOptions (WatchedTvSeriesSearchOptionsDTO dto)
     {

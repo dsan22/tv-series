@@ -3,12 +3,10 @@ package rs.ac.ni.pmf.rwa.tvseries.data.specification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.WatchListEntity;
-import rs.ac.ni.pmf.rwa.tvseries.shared.TvSeriesSortByField;
 import rs.ac.ni.pmf.rwa.tvseries.shared.WatchedTvSeriesSortByField;
 
 import javax.persistence.criteria.*;

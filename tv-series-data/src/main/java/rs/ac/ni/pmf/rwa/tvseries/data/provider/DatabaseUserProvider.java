@@ -2,18 +2,13 @@ package rs.ac.ni.pmf.rwa.tvseries.data.provider;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
-import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
-import rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity;
 import rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity;
-import rs.ac.ni.pmf.rwa.tvseries.data.mapper.TvSeriesEntityMapper;
 import rs.ac.ni.pmf.rwa.tvseries.data.mapper.UserEntityMapper;
 import rs.ac.ni.pmf.rwa.tvseries.exception.UnknownUserException;
-import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 
 import java.util.List;
 import java.util.Optional;

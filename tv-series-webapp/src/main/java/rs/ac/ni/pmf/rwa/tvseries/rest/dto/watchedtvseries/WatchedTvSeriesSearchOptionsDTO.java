@@ -20,15 +20,16 @@ public class WatchedTvSeriesSearchOptionsDTO {
 
     @Schema(description = "Number of elements on one page")
     Integer pageSize;
-    boolean showUnfinishedTvSeries;
 
+    @Schema(description = "Show tv series that user is not finished watching ")
+    boolean showUnfinishedTvSeries;
+    @Schema(description = "Show tv series that user is  finished watching ")
     boolean showFinishedTvSeries;
 
+    @Schema(description = "Substring that tv series title should have")
     String titleSearch;
 
-
     WatchedTvSeriesSortByField sortBy;
-
 
     Sort.Direction sortDirection;
 

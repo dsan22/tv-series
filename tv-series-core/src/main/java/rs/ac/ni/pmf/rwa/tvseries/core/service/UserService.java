@@ -49,19 +49,15 @@ public class UserService {
                 log.warn("Error updating User: New username[{}] is already taken", newUsername);
                 throw new DuplicateUserException(newUsername);
             }
-
-            //userProvider.removeUser(username);
         }
         log.info("Updating  User with username[{}]", username);
         userProvider.updateUser(user, username);
-
     }
 
     public void delete(final String username) {
         if (userProvider.getUserByUsername(username).isEmpty()) {
             log.warn("Error deleting User: User with username[{}] dose not exists", username);
             throw new UnknownUserException(username);
-
         }
         log.info("Deleting  User with username[{}]", username);
         userProvider.removeUser(username);

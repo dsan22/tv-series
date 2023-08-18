@@ -8,17 +8,17 @@ import rs.ac.ni.pmf.rwa.tvseries.core.provider.WatchListProvider;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.WatchListService;
+import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.UserDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.provider.DatabaseTvSeriesProvider;
-import rs.ac.ni.pmf.rwa.tvseries.data.dao.TvSeriesDao;
 import rs.ac.ni.pmf.rwa.tvseries.data.provider.DatabaseUserProvider;
 import rs.ac.ni.pmf.rwa.tvseries.data.provider.DatabaseWatchListProvider;
 
 @Configuration
 public class ApplicationConfiguration
 {
-//	TV SERIES
+	//	TV SERIES
 
 	@Bean
 	public TvSeriesProvider getTvSeriesProvider(final TvSeriesDao tvSeriesDao){
@@ -29,8 +29,6 @@ public class ApplicationConfiguration
 	TvSeriesService getTvSeriesService(TvSeriesProvider tvSeriesProvider){
 		return new TvSeriesService(tvSeriesProvider);
 	}
-
-
 
 	// USER
 
@@ -53,13 +51,10 @@ public class ApplicationConfiguration
 	@Bean
 	WatchListService watchListService(final UserProvider userProvider,final TvSeriesProvider tvSeriesProvider,final WatchListProvider watchListProvider){
 		return new WatchListService(
-				userProvider,
-				tvSeriesProvider,
-				watchListProvider);
+			userProvider,
+			tvSeriesProvider,
+			watchListProvider
+		);
 	}
-
-
-
-
 
 }
