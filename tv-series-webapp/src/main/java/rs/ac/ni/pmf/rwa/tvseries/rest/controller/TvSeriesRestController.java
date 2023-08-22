@@ -11,7 +11,8 @@ import rs.ac.ni.pmf.rwa.tvseries.core.service.TvSeriesService;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesSaveDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesSearchOptionsDTO;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.TvSeriesMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.tvseries.TvSeriesMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.tvseries.TvSeriesSearchOptionsMapper;
 
 @SecurityRequirement(name = "default")
 @RestController
@@ -21,11 +22,13 @@ public class TvSeriesRestController {
 
     private final TvSeriesMapper tvSeriesMapper;
 
+    private final TvSeriesSearchOptionsMapper tvSeriesSearchOptionsMapper;
+
 
     @GetMapping("/tv-series")
     public Page<TvSeriesDTO> getAllTvSeries(@ParameterObject TvSeriesSearchOptionsDTO tvSeriesSearchOptions)
     {
-        return tvSeriesService.getAllTvSeries(tvSeriesMapper.fromDtoSearchOptions(tvSeriesSearchOptions)).map(tvSeriesMapper::toDto);
+        return tvSeriesService.getAllTvSeries(tvSeriesSearchOptionsMapper.fromDto(tvSeriesSearchOptions)).map(tvSeriesMapper::toDto);
     }
 
     @GetMapping("/tv-series/{id}")

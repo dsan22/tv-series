@@ -11,19 +11,21 @@ import rs.ac.ni.pmf.rwa.tvseries.core.service.WatchListService;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.tvseries.TvSeriesWatchedDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.watchedtvseries.WatchedTvSeriesSearchOptionsDTO;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.TvSeriesMapper;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.WatchedTvSeriesMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.tvseries.TvSeriesMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.user.UserMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.watchedtvseries.WatchedTvSeriesMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.watchedtvseries.WatchedTvSeriesSearchOptionsMapper;
 
 @SecurityRequirement(name = "default")
 @RestController
 @RequiredArgsConstructor
 public class WatchListRestController {
     private final WatchListService watchListService;
-    private final UserMapper userMapper;
     private final TvSeriesMapper tvSeriesMapper;
 
     private  final WatchedTvSeriesMapper watchedTvSeriesMapper;
+
+    private  final WatchedTvSeriesSearchOptionsMapper watchedTvSeriesSearchOptionsMapper;
 
     @PreAuthorize("#username == authentication.name")
     @PostMapping("/{username}/watch-list")
@@ -45,7 +47,7 @@ public class WatchListRestController {
             @ParameterObject WatchedTvSeriesSearchOptionsDTO searchOptions
     )
     {
-        return watchListService.getTvSeriesByUsername(username,watchedTvSeriesMapper.fromDtoSearchOptions(searchOptions)).map(tvSeriesMapper::toDtoWatched);
+        return watchListService.getTvSeriesByUsername(username,watchedTvSeriesSearchOptionsMapper.fromDto(searchOptions)).map(tvSeriesMapper::toDtoWatched);
     }
 
     @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")

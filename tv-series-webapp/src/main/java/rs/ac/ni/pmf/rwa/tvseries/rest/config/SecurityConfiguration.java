@@ -69,7 +69,7 @@ public class SecurityConfiguration {
                             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 
                             final ErrorDTO errorDTO = ErrorDTO.builder()
-                                    .code(ErrorCode.GENERAL_REQUEST_ERROR)
+                                    .code(ErrorCode.FORBIDDEN_ACCESS)
                                     .details(
                                             "You don't have rights to access '" + request.getServletPath() + "'. " + accessDeniedException.getMessage())
                                     .build();
@@ -82,7 +82,7 @@ public class SecurityConfiguration {
                             response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 
                             final ErrorDTO errorDTO = ErrorDTO.builder()
-                                    .code(ErrorCode.GENERAL_REQUEST_ERROR)
+                                    .code(ErrorCode.UNAUTHORIZED_ACCESS)
                                     .details("Bad username and/or password. " + authException.getMessage())
                                     .build();
 

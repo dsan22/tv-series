@@ -24,19 +24,5 @@ public class TvSeriesEntity {
     @OneToMany(mappedBy = "tvSeries",cascade = CascadeType.ALL, orphanRemoval = true)
     List<WatchListEntity> usersWatched;
 
-    @Transient
-    Double averageRating;
-
-    @PostLoad
-    public void calculateRating()
-    {
-         averageRating= usersWatched.stream()
-                .mapToInt( WatchListEntity::getRating)
-                .average()
-                .orElse(0.0d);
-    }
-
-
-
 
 }

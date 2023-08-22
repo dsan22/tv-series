@@ -9,8 +9,8 @@ import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.service.UserService;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserAccessDTO;
 import rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserDTO;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserAccessMapper;
-import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.UserMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.user.UserAccessMapper;
+import rs.ac.ni.pmf.rwa.tvseries.rest.mapper.user.UserMapper;
 
 import java.util.List;
 import java.util.stream.Collectors;

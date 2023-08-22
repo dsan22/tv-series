@@ -1,4 +1,4 @@
-package rs.ac.ni.pmf.rwa.tvseries.rest.mapper;
+package rs.ac.ni.pmf.rwa.tvseries.rest.mapper.user;
 
 import org.springframework.stereotype.Component;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;

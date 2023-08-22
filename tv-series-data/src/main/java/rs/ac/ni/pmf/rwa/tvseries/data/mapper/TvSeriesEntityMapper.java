@@ -8,11 +8,17 @@ public class TvSeriesEntityMapper {
 
     public static TvSeries fromEntity(final TvSeriesEntity entity)
     {
+
+        double averageRating= entity.getUsersWatched().stream()
+                .mapToInt( WatchListEntity::getRating)
+                .average()
+                .orElse(0.0d);
+
         return TvSeries.builder()
                 .id(entity.getId())
                 .name(entity.getName())
                 .numberOfEpisodes(entity.getNumberOfEpisodes())
-                .averageRating(entity.getAverageRating())
+                .averageRating(averageRating)
                 .build();
     }
 

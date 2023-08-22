@@ -1,4 +1,4 @@
-package rs.ac.ni.pmf.rwa.tvseries.rest.mapper;
+package rs.ac.ni.pmf.rwa.tvseries.rest.mapper.tvseries;
 
 import org.springframework.stereotype.Component;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
@@ -46,21 +46,7 @@ public class TvSeriesMapper {
 
 
 
-    public TvSeriesSearchOptions fromDtoSearchOptions (TvSeriesSearchOptionsDTO dto)
-    {
-        return TvSeriesSearchOptions.builder()
-                .page(dto.getPage())
-                .pageSize(dto.getPageSize())
-                .maxNumberOfEpisodes(dto.getMaxNumberOfEpisodes())
-                .minNumberOfEpisodes(dto.getMinNumberOfEpisodes())
-                .titleSearch(dto.getTitleSearch())
-                .maxRating(dto.getMaxRating())
-                .minRating(dto.getMinRating())
-                .sortBy(dto.getSortBy())
-                .sortDirection(dto.getSortDirection())
 
-                .build();
-    }
 
 
 
