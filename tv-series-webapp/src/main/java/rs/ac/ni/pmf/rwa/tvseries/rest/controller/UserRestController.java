@@ -47,14 +47,14 @@ public class UserRestController {
 
         userService.createUser(userMapper.fromDto(userDTO));
     }
-    @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")
+    @PreAuthorize("#username == authentication.name || hasAuthority('ADMIN')")
     @PutMapping("/users/{username}")
     @ResponseStatus(HttpStatus.CREATED)
     public void updateUser(@RequestBody final UserDTO userDTO,@PathVariable(value = "username") String username)
     {
         userService.update(userMapper.fromDto(userDTO), username);
     }
-    @PreAuthorize("#username == authentication.name || authentication.authorities.contains('Admin')")
+    @PreAuthorize("#username == authentication.name || hasAuthority('ADMIN')")
     @DeleteMapping("/users/{username}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteUser(@PathVariable(value = "username") String username)

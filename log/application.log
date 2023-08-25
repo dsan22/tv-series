@@ -7696,3 +7696,767 @@ Consider defining a bean of type 'rs.ac.ni.pmf.rwa.tvseries.data.dao.WatchListDa
 2023-08-22 22:49:20.783 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.c.s.WatchListService - Getting all TvSeries.
 2023-08-22 22:49:25.438 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [username]
 2023-08-22 22:49:25.438 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.c.s.WatchListService - Getting all TvSeries.
+2023-08-22 22:51:29.791 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-22 22:51:29.793 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-22 22:51:29.796 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:20:22.732 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 11120 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:20:22.736 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:20:22.813 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:20:22.814 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:20:23.740 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:20:23.809 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:20:24.426 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:20:24.436 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:20:24.436 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:20:24.436 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:20:24.507 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:20:24.507 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1693 ms
+2023-08-23 17:20:24.569 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [1925FAA7C30FC8F365C3944B13E3647D]
+2023-08-23 17:20:24.726 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:20:24.795 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:20:24.992 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:20:25.117 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:20:25.214 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:20:25.255 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:20:26.049 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:20:26.058 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:20:29.024 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@13b47fa3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40e6f737, org.springframework.security.web.context.SecurityContextPersistenceFilter@5a10b8d0, org.springframework.security.web.header.HeaderWriterFilter@2bda7ccd, org.springframework.security.web.authentication.logout.LogoutFilter@1fdf2d3f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@51ac369, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65a707ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e57e094, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14e3036, org.springframework.security.web.session.SessionManagementFilter@41292dd3, org.springframework.security.web.access.ExceptionTranslationFilter@4a51e989, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3b1decc9]
+2023-08-23 17:20:29.033 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:20:29.033 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:20:29.034 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:20:29.034 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:20:29.509 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:20:29.526 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:20:29.542 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:20:29.554 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 7.193 seconds (JVM running for 8.133)
+2023-08-23 17:20:32.791 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:20:32.791 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:20:32.792 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:20:33.496 [http-nio-8080-exec-6] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 366 ms
+2023-08-23 17:21:54.718 [http-nio-8080-exec-10] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Tv Series with id[0] is not founded
+2023-08-23 17:21:54.718 [http-nio-8080-exec-10] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Creating TvSeries
+2023-08-23 17:21:54.718 [http-nio-8080-exec-10] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Saved Tv Series
+2023-08-23 17:22:18.193 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting all TvSeries.
+2023-08-23 17:22:18.232 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity.usersWatched, could not initialize proxy - no Session]
+2023-08-23 17:22:58.052 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:22:58.056 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:22:58.060 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:23:02.271 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 12944 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:23:02.274 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:23:02.322 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:23:02.322 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:23:03.026 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:23:03.081 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:23:03.593 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:23:03.600 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:23:03.601 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:23:03.601 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:23:03.656 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:23:03.656 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
+2023-08-23 17:23:03.710 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [BFB5DFBBCA363CD976426ED78CC63255]
+2023-08-23 17:23:03.834 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:23:03.877 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:23:04.025 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:23:04.117 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:23:04.168 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:23:04.194 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:23:04.784 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:23:04.793 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:23:05.358 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7337b2ab, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e4da051, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c6064f9, org.springframework.security.web.header.HeaderWriterFilter@2aff7336, org.springframework.security.web.authentication.logout.LogoutFilter@5c70a142, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7bfcc367, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@584d2daa, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c14bb0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72907a96, org.springframework.security.web.session.SessionManagementFilter@2ea4f3e8, org.springframework.security.web.access.ExceptionTranslationFilter@364d1990, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4deb67f0]
+2023-08-23 17:23:05.360 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:23:05.360 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:23:05.360 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:23:05.360 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:23:05.800 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:23:05.818 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:23:05.832 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:23:05.842 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.916 seconds (JVM running for 4.65)
+2023-08-23 17:23:16.062 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:23:16.062 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:23:16.063 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:23:16.533 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting all TvSeries.
+2023-08-23 17:23:33.789 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting all TvSeries.
+2023-08-23 17:23:51.987 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting TvSeries with id [1001] .
+2023-08-23 17:23:51.993 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1001]
+2023-08-23 17:23:51.998 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity.usersWatched, could not initialize proxy - no Session]
+2023-08-23 17:24:08.352 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:24:08.355 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:24:08.358 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:24:12.284 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 19476 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:24:12.287 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:24:12.334 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:24:12.335 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:24:13.038 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:24:13.094 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:24:13.603 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:24:13.611 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:24:13.611 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:24:13.611 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:24:13.668 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:24:13.668 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1333 ms
+2023-08-23 17:24:13.728 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [81DCFF71A27F28FBA23D57F38DDE6899]
+2023-08-23 17:24:13.871 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:24:13.924 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:24:14.073 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:24:14.165 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:24:14.218 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:24:14.244 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:24:14.815 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:24:14.823 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:24:15.421 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1188d3c0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30c1fe01, org.springframework.security.web.context.SecurityContextPersistenceFilter@4fee2e8b, org.springframework.security.web.header.HeaderWriterFilter@4b8e2e49, org.springframework.security.web.authentication.logout.LogoutFilter@68ad4838, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2e91ef27, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6363692b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b316ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@eca94cf, org.springframework.security.web.session.SessionManagementFilter@6d7df93f, org.springframework.security.web.access.ExceptionTranslationFilter@503984a6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1e12eccb]
+2023-08-23 17:24:15.429 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:24:15.429 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:24:15.429 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:24:15.429 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:24:15.859 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:24:15.877 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:24:15.891 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:24:15.901 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.929 seconds (JVM running for 4.758)
+2023-08-23 17:24:25.459 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:24:25.459 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:24:25.460 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:24:25.859 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting TvSeries with id [1001] .
+2023-08-23 17:24:25.899 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1001]
+2023-08-23 17:24:49.878 [http-nio-8080-exec-3] WARN  r.a.n.p.r.t.c.s.TvSeriesService - Error updating Tv Series: ids doesnt match (1001!=0)
+2023-08-23 17:24:49.882 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [java.lang.IllegalArgumentException: Id of tv series cannot be changed]
+2023-08-23 17:24:59.572 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1001]
+2023-08-23 17:24:59.574 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Updating Tv Series with id[1001]
+2023-08-23 17:24:59.574 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Updated Tv Series
+2023-08-23 17:24:59.595 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.orm.jpa.JpaSystemException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity.usersWatched; nested exception is org.hibernate.HibernateException: A collection with cascade="all-delete-orphan" was no longer referenced by the owning entity instance: rs.ac.ni.pmf.rwa.tvseries.data.entity.TvSeriesEntity.usersWatched]
+2023-08-23 17:27:06.490 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:27:06.493 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:27:06.496 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:27:10.479 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 8832 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:27:10.481 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:27:10.530 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:27:10.530 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:27:11.234 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:27:11.290 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:27:11.800 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:27:11.807 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:27:11.807 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:27:11.807 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:27:11.862 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:27:11.862 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1331 ms
+2023-08-23 17:27:11.917 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [0128C36ECF99050D9C056C75735C5979]
+2023-08-23 17:27:12.044 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:27:12.088 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:27:12.236 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:27:12.330 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:27:12.381 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:27:12.407 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:27:13.005 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:27:13.014 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:27:13.581 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@15a43fe2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e2e0b5e, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b1891e9, org.springframework.security.web.header.HeaderWriterFilter@1beb1328, org.springframework.security.web.authentication.logout.LogoutFilter@5da3234f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@260baf5f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@628b37e8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47950efa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4e9a17e5, org.springframework.security.web.session.SessionManagementFilter@3c1d2927, org.springframework.security.web.access.ExceptionTranslationFilter@3b89ae72, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7f2885b6]
+2023-08-23 17:27:13.583 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:27:13.583 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:27:13.583 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:27:13.583 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:27:14.042 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:27:14.060 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:27:14.074 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:27:14.084 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.935 seconds (JVM running for 4.654)
+2023-08-23 17:27:15.790 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:27:15.790 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:27:15.791 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:27:16.325 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1001]
+2023-08-23 17:27:16.342 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Updating Tv Series with id[1001]
+2023-08-23 17:27:16.342 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Updated Tv Series
+2023-08-23 17:28:10.313 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:28:10.317 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:28:10.321 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:28:14.303 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 15824 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:28:14.306 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:28:14.352 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:28:14.352 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:28:15.048 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:28:15.104 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:28:15.625 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:28:15.633 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:28:15.633 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:28:15.633 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:28:15.688 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:28:15.688 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
+2023-08-23 17:28:15.743 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [0F990665D475CB8730BD94DE52C51840]
+2023-08-23 17:28:15.866 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:28:15.910 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:28:16.057 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:28:16.148 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:28:16.199 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:28:16.226 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:28:16.798 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:28:16.807 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:28:17.333 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cbadfee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@260c405a, org.springframework.security.web.context.SecurityContextPersistenceFilter@3254e51e, org.springframework.security.web.header.HeaderWriterFilter@13880f48, org.springframework.security.web.authentication.logout.LogoutFilter@1bfc00df, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@eca94cf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@579d99cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53d91902, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1cfc593e, org.springframework.security.web.session.SessionManagementFilter@6363692b, org.springframework.security.web.access.ExceptionTranslationFilter@3e45fb0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c7b04a3]
+2023-08-23 17:28:17.339 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:28:17.339 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:28:17.339 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:28:17.339 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:28:17.769 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:28:17.786 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:28:17.800 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:28:17.810 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.824 seconds (JVM running for 4.582)
+2023-08-23 17:28:26.529 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:28:26.530 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:28:26.530 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-08-23 17:28:26.967 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1001]
+2023-08-23 17:28:26.986 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Updating Tv Series with id[1001]
+2023-08-23 17:28:26.986 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Deleted Tv Series with id[1001]
+2023-08-23 17:28:47.813 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Tv Series with id[0] is not founded
+2023-08-23 17:28:47.813 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Creating TvSeries
+2023-08-23 17:28:47.814 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Saved Tv Series
+2023-08-23 17:29:53.424 [http-nio-8080-exec-10] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 315 ms
+2023-08-23 17:29:55.272 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:29:55.276 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:29:55.279 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:29:57.848 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 21092 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:29:57.850 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:29:57.898 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:29:57.898 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:29:58.610 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:29:58.663 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:29:59.175 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:29:59.182 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:29:59.182 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:29:59.182 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:29:59.240 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:29:59.240 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1342 ms
+2023-08-23 17:29:59.293 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [FDAECFD5C0BBFBB2FCB2994843EF0E21]
+2023-08-23 17:29:59.415 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:29:59.464 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:29:59.604 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:29:59.693 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:29:59.743 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:29:59.768 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:30:00.350 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:30:00.359 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:30:00.904 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@562a29b9, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@466920c9, org.springframework.security.web.context.SecurityContextPersistenceFilter@1065a1b0, org.springframework.security.web.header.HeaderWriterFilter@775913d9, org.springframework.security.web.authentication.logout.LogoutFilter@7770c20c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1710f865, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@149b9c9d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ac48607, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ad8b559, org.springframework.security.web.session.SessionManagementFilter@32730ea, org.springframework.security.web.access.ExceptionTranslationFilter@514290e8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73568a87]
+2023-08-23 17:30:00.906 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:30:00.906 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:30:00.906 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:30:00.906 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:30:01.340 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:30:01.357 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:30:01.372 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:30:01.382 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.863 seconds (JVM running for 4.555)
+2023-08-23 17:30:08.993 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:30:08.993 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:30:08.994 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:30:09.220 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [user]
+2023-08-23 17:30:09.220 [http-nio-8080-exec-1] WARN  r.a.n.p.r.t.core.service.UserService - Error creating User: User with username[user] already exists
+2023-08-23 17:30:09.241 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateUserException: Username 'user' already taken!]
+2023-08-23 17:30:20.106 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - User with username[novi] is not founded
+2023-08-23 17:30:20.106 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.core.service.UserService - Creating  User with username[novi]
+2023-08-23 17:30:20.106 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Saved User
+2023-08-23 17:31:12.576 [http-nio-8080-exec-4] INFO  r.a.n.p.r.t.core.service.UserService - Getting all Users
+2023-08-23 17:31:12.577 [http-nio-8080-exec-4] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned list of all Users
+2023-08-23 17:31:58.217 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.core.service.UserService - Getting User with username [novi]
+2023-08-23 17:31:58.220 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:32:08.906 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:32:08.906 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.core.service.UserService - Getting  User 'novi' access  
+2023-08-23 17:32:28.702 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.security.access.AccessDeniedException: Access is denied]
+2023-08-23 17:33:56.411 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:33:56.414 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:33:56.417 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:34:00.525 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 23120 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:34:00.527 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:34:00.578 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:34:00.578 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:34:01.278 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:34:01.333 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:34:01.840 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:34:01.847 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:34:01.847 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:34:01.847 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:34:01.908 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:34:01.908 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1330 ms
+2023-08-23 17:34:01.961 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [6CC9E3148EA8113529732DA3C07B16D6]
+2023-08-23 17:34:02.086 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:34:02.130 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:34:02.278 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:34:02.371 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:34:02.427 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:34:02.453 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:34:03.029 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:34:03.037 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:34:03.563 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@719e96d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11b9b2af, org.springframework.security.web.context.SecurityContextPersistenceFilter@3254e51e, org.springframework.security.web.header.HeaderWriterFilter@13880f48, org.springframework.security.web.authentication.logout.LogoutFilter@3255dfd4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@110df470, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@579d99cd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6340bde9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60bd42ff, org.springframework.security.web.session.SessionManagementFilter@6363692b, org.springframework.security.web.access.ExceptionTranslationFilter@3e45fb0b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@15243d48]
+2023-08-23 17:34:03.571 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:34:03.571 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:34:03.571 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:34:03.571 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:34:04.002 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:34:04.019 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:34:04.034 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:34:04.043 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.869 seconds (JVM running for 4.574)
+2023-08-23 17:34:20.293 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:34:20.293 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:34:20.294 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:34:20.779 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:34:20.781 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - User with username[novi1] is not founded
+2023-08-23 17:34:20.781 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.core.service.UserService - Updating  User with username[novi]
+2023-08-23 17:34:20.782 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Updated User
+2023-08-23 17:34:29.955 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi1]
+2023-08-23 17:34:29.958 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - User with username[novi] is not founded
+2023-08-23 17:34:29.958 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.core.service.UserService - Updating  User with username[novi1]
+2023-08-23 17:34:29.960 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Updated User
+2023-08-23 17:35:00.211 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:35:00.211 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.core.service.UserService - Managing  User 'novi' access  
+2023-08-23 17:35:11.303 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `rs.ac.ni.pmf.rwa.tvseries.shared.Roles` from String "user": not one of the values accepted for Enum class: [GUEST, USER, ADMIN]; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `rs.ac.ni.pmf.rwa.tvseries.shared.Roles` from String "user": not one of the values accepted for Enum class: [GUEST, USER, ADMIN]<EOL> at [Source: (org.springframework.util.StreamUtils$NonClosingInputStream); line: 2, column: 11] (through reference chain: rs.ac.ni.pmf.rwa.tvseries.rest.dto.user.UserAccessDTO["role"])]
+2023-08-23 17:35:18.756 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:35:18.756 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.core.service.UserService - Managing  User 'novi' access  
+2023-08-23 17:35:43.714 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:35:43.717 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:35:43.720 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:35:47.654 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 23868 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:35:47.656 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:35:47.703 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:35:47.704 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:35:48.396 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:35:48.451 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 48 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:35:48.962 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:35:48.970 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:35:48.971 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:35:48.971 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:35:49.028 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:35:49.028 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1324 ms
+2023-08-23 17:35:49.085 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [0014CCDE851079CBA91F41657AF284A3]
+2023-08-23 17:35:49.210 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:35:49.254 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:35:49.406 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:35:49.501 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:35:49.554 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:35:49.584 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:35:50.230 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:35:50.240 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:35:50.783 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@765c0d4c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54e9770, org.springframework.security.web.context.SecurityContextPersistenceFilter@3c1d2927, org.springframework.security.web.header.HeaderWriterFilter@46306a72, org.springframework.security.web.authentication.logout.LogoutFilter@2b09f5a5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@18cd6582, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e09664d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b1891e9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7bcebd94, org.springframework.security.web.session.SessionManagementFilter@6243fa1e, org.springframework.security.web.access.ExceptionTranslationFilter@579d99cd, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@53bda10f]
+2023-08-23 17:35:50.787 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:35:50.787 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:35:50.787 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:35:50.787 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:35:51.235 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:35:51.253 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:35:51.267 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:35:51.277 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.947 seconds (JVM running for 4.7)
+2023-08-23 17:35:56.954 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:35:56.954 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:35:56.955 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:35:57.595 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 451 ms
+2023-08-23 17:36:22.459 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:36:22.461 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.core.service.UserService - Deleting  User with username[novi]
+2023-08-23 17:36:22.461 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Deleted User with username[novi]
+2023-08-23 17:36:22.466 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call; nested exception is javax.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call]
+2023-08-23 17:36:50.592 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:36:50.592 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.core.service.UserService - Deleting  User with username[novi]
+2023-08-23 17:36:50.592 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Deleted User with username[novi]
+2023-08-23 17:36:50.596 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.dao.InvalidDataAccessApiUsageException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call; nested exception is javax.persistence.TransactionRequiredException: No EntityManager with actual transaction available for current thread - cannot reliably process 'remove' call]
+2023-08-23 17:37:55.123 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:37:55.126 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:37:55.129 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:37:59.057 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 1596 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:37:59.059 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:37:59.107 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:37:59.107 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:37:59.816 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:37:59.871 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:38:00.396 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:38:00.404 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:38:00.404 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:38:00.404 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:38:00.463 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:38:00.464 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1356 ms
+2023-08-23 17:38:00.518 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [4D5F7C4B8BC4B7E9EDC4FCEB7DEDBDA9]
+2023-08-23 17:38:00.641 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:38:00.687 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:38:00.830 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:38:00.921 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:38:00.975 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:38:01.002 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:38:01.572 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:38:01.580 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:38:02.108 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@e1e0c09, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f287070, org.springframework.security.web.context.SecurityContextPersistenceFilter@46306a72, org.springframework.security.web.header.HeaderWriterFilter@40f87dd2, org.springframework.security.web.authentication.logout.LogoutFilter@5d871a5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3ad17ac0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e11b3f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1beb1328, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@765c0d4c, org.springframework.security.web.session.SessionManagementFilter@4a86f84e, org.springframework.security.web.access.ExceptionTranslationFilter@cf2e1ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a075f1b]
+2023-08-23 17:38:02.116 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:38:02.117 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:38:02.117 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:38:02.117 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:38:02.553 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:38:02.570 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:38:02.585 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:38:02.595 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.876 seconds (JVM running for 4.543)
+2023-08-23 17:38:08.452 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:38:08.453 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:38:08.453 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-08-23 17:38:08.887 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:38:08.889 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.core.service.UserService - Deleting  User with username[novi]
+2023-08-23 17:38:08.894 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Deleted User with username[novi]
+2023-08-23 17:38:44.826 [http-nio-8080-exec-7] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 344 ms
+2023-08-23 17:40:16.955 [http-nio-8080-exec-6] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [user]
+2023-08-23 17:40:16.955 [http-nio-8080-exec-6] WARN  r.a.n.p.r.t.core.service.UserService - Error creating User: User with username[user] already exists
+2023-08-23 17:40:16.958 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [rs.ac.ni.pmf.rwa.tvseries.exception.DuplicateUserException: Username 'user' already taken!]
+2023-08-23 17:40:23.607 [http-nio-8080-exec-9] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - User with username[novi] is not founded
+2023-08-23 17:40:23.608 [http-nio-8080-exec-9] INFO  r.a.n.p.r.t.core.service.UserService - Creating  User with username[novi]
+2023-08-23 17:40:23.608 [http-nio-8080-exec-9] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Saved User
+2023-08-23 17:41:08.054 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:41:08.057 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:41:26.466 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:41:26.468 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:41:26.471 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:41:30.601 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 3488 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:41:30.603 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:41:30.652 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:41:30.652 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:41:31.348 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:41:31.404 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:41:31.908 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:41:31.916 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:41:31.916 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:41:31.917 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:41:31.974 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:41:31.974 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1321 ms
+2023-08-23 17:41:32.027 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [D4F70D6AE73EB7A7A47BEEF63C7DE63E]
+2023-08-23 17:41:32.030 [restartedMain] ERROR o.a.catalina.session.StandardManager - Exception loading sessions from persistent storage
+java.io.StreamCorruptedException: invalid type code: 00
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1775)
+	at java.base/java.io.ObjectInputStream$FieldValues.<init>(ObjectInputStream.java:2617)
+	at java.base/java.io.ObjectInputStream.defaultReadObject(ObjectInputStream.java:652)
+	at java.base/java.lang.Throwable.readObject(Throwable.java:912)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1104)
+	at java.base/java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2434)
+	at java.base/java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2268)
+	at java.base/java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1744)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:514)
+	at java.base/java.io.ObjectInputStream.readObject(ObjectInputStream.java:472)
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1564)
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1050)
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:219)
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162)
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:356)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4956)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:795)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:871)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:249)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:428)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:917)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:481)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at rs.ac.ni.pmf.rwa.tvseries.TvSeriesApplication.main(TvSeriesApplication.java:18)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2023-08-23 17:41:32.153 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:41:32.200 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:41:32.341 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:41:32.432 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:41:32.483 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:41:32.509 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:41:33.073 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:41:33.082 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:41:33.617 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@769db0e6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@59ae94ad, org.springframework.security.web.context.SecurityContextPersistenceFilter@1883be4a, org.springframework.security.web.header.HeaderWriterFilter@4148ca64, org.springframework.security.web.authentication.logout.LogoutFilter@5608d3b9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@452d563e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@244c63a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1e6b349c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@392e292e, org.springframework.security.web.session.SessionManagementFilter@5a048fbf, org.springframework.security.web.access.ExceptionTranslationFilter@5d871a5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64fc081d]
+2023-08-23 17:41:33.620 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:41:33.620 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:41:33.620 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:41:33.620 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:41:34.053 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:41:34.070 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:41:34.085 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:41:34.095 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.809 seconds (JVM running for 4.58)
+2023-08-23 17:41:38.068 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:41:38.068 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:41:38.069 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:41:38.601 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:41:38.630 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:41:57.327 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:41:57.330 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:43:03.995 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:43:03.998 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:43:04.002 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:43:06.733 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 14480 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:43:06.735 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:43:06.784 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:43:06.784 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:43:07.469 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:43:07.523 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:43:08.022 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:43:08.029 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:43:08.030 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:43:08.030 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:43:08.086 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:43:08.086 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1301 ms
+2023-08-23 17:43:08.136 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [3D54559D8133010C3A8829741B5DBBA8]
+2023-08-23 17:43:08.258 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:43:08.304 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:43:08.453 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:43:08.547 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:43:08.599 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:43:08.628 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:43:09.227 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:43:09.236 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:43:09.776 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@429abc60, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6652c3d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@716e6552, org.springframework.security.web.header.HeaderWriterFilter@68ad4838, org.springframework.security.web.authentication.logout.LogoutFilter@4fb3ab59, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1e775379, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2fb0cf59, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4df0e2a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16bddbc4, org.springframework.security.web.session.SessionManagementFilter@74c6ddb0, org.springframework.security.web.access.ExceptionTranslationFilter@628b37e8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7bcebd94]
+2023-08-23 17:43:09.778 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:43:09.778 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:43:09.779 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:43:09.779 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:43:10.205 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:43:10.223 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:43:10.237 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:43:10.247 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.839 seconds (JVM running for 4.537)
+2023-08-23 17:43:13.322 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:43:13.322 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:43:13.323 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:43:13.886 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:43:13.915 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:45:04.208 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:45:04.211 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:48:16.600 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:48:16.603 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:48:16.606 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:48:20.658 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 21772 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:48:20.661 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:48:20.708 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:48:20.708 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:48:21.401 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:48:21.456 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:48:21.958 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:48:21.965 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:48:21.966 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:48:21.966 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:48:22.022 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:48:22.022 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1313 ms
+2023-08-23 17:48:22.075 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [D72274FFBD824181890E4AA4F5A2EBEA]
+2023-08-23 17:48:22.199 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:48:22.242 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:48:22.404 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:48:22.506 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:48:22.556 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:48:22.582 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:48:23.150 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:48:23.158 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:48:23.693 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5a6fb94c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4412c326, org.springframework.security.web.context.SecurityContextPersistenceFilter@4bf8da70, org.springframework.security.web.header.HeaderWriterFilter@1b90b7bf, org.springframework.security.web.authentication.logout.LogoutFilter@33965f3, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f322a25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4691c3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5d93963d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12e12b1c, org.springframework.security.web.session.SessionManagementFilter@1ace79e8, org.springframework.security.web.access.ExceptionTranslationFilter@6c14bb0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7337b2ab]
+2023-08-23 17:48:23.694 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:48:23.695 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:48:23.695 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:48:23.695 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:48:24.124 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:48:24.141 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:48:24.155 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:48:24.165 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.82 seconds (JVM running for 4.562)
+2023-08-23 17:48:36.717 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:48:36.717 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:48:36.718 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:48:37.258 [http-nio-8080-exec-4] INFO  o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 348 ms
+2023-08-23 17:49:03.765 [http-nio-8080-exec-9] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:49:03.774 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:51:13.187 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:51:13.190 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:51:13.193 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:51:16.733 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 21704 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:51:16.736 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:51:16.789 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:51:16.789 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:51:17.653 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:51:17.729 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:51:18.328 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:51:18.336 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:51:18.337 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:51:18.337 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:51:18.397 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:51:18.397 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1608 ms
+2023-08-23 17:51:18.461 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [8CC3732831312EE98F1C9CC0A80E1CD0]
+2023-08-23 17:51:18.600 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:51:18.654 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:51:18.823 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:51:18.929 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:51:18.989 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:51:19.019 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:51:19.701 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:51:19.713 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:51:20.391 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@21a6496, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57364a8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@21018cd2, org.springframework.security.web.header.HeaderWriterFilter@783c9432, org.springframework.security.web.authentication.logout.LogoutFilter@2eb796e0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5cc1370c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@783937c3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4c619546, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40e18dce, org.springframework.security.web.session.SessionManagementFilter@2d0bd500, org.springframework.security.web.access.ExceptionTranslationFilter@65d6a662, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26bb64ff]
+2023-08-23 17:51:20.393 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:51:20.394 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:51:20.394 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:51:20.394 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:51:20.912 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:51:20.931 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:51:20.947 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:51:20.958 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 4.568 seconds (JVM running for 5.962)
+2023-08-23 17:51:27.654 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:51:27.654 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:51:27.655 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:51:28.196 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:51:28.231 [http-nio-8080-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 17:52:38.343 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:52:38.346 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 17:52:38.349 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 17:52:42.563 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 8972 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 17:52:42.565 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 17:52:42.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 17:52:42.614 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 17:52:43.302 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 17:52:43.355 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 3 JPA repository interfaces.
+2023-08-23 17:52:43.854 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 17:52:43.864 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:52:43.865 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 17:52:43.865 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 17:52:43.919 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 17:52:43.919 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1304 ms
+2023-08-23 17:52:43.974 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [D872994EE44705064DD55B171E8BDA25]
+2023-08-23 17:52:44.095 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 17:52:44.137 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 17:52:44.279 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 17:52:44.371 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 17:52:44.421 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 17:52:44.448 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 17:52:45.015 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 17:52:45.024 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 17:52:45.553 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3275c688, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2989d5bc, org.springframework.security.web.context.SecurityContextPersistenceFilter@7b62d21c, org.springframework.security.web.header.HeaderWriterFilter@364d1990, org.springframework.security.web.authentication.logout.LogoutFilter@713df0e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22f73208, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c6064f9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3552fb2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7337b2ab, org.springframework.security.web.session.SessionManagementFilter@5095e478, org.springframework.security.web.access.ExceptionTranslationFilter@32730ea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2530f173]
+2023-08-23 17:52:45.555 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:52:45.556 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 17:52:45.556 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 17:52:45.556 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 17:52:45.984 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 17:52:46.002 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 17:52:46.017 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 17:52:46.027 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.784 seconds (JVM running for 4.486)
+2023-08-23 17:53:00.271 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 17:53:00.271 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 17:53:00.272 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 17:53:00.843 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 17:53:00.859 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Tv Series with id[1002] is not founded on users[novi] watch list  
+2023-08-23 17:53:00.884 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1002]
+2023-08-23 17:53:00.888 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.WatchListService - Tv Series with id[1002] successfully added to user[novi] Watch List  
+2023-08-23 17:53:00.892 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Tv Series with id[1002] is added to users[novi] watch list 
+2023-08-23 18:27:51.889 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:27:51.889 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.c.s.WatchListService - Getting all TvSeries.
+2023-08-23 18:28:11.002 [http-nio-8080-exec-4] INFO  r.a.n.p.r.t.c.s.TvSeriesService - Getting TvSeries with id [1002] .
+2023-08-23 18:28:11.005 [http-nio-8080-exec-4] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1002]
+2023-08-23 18:28:26.809 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:28:26.810 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.c.s.WatchListService - Getting tvSeries  with id[1002] that's on User[novi] watchlist 
+2023-08-23 18:28:26.813 [http-nio-8080-exec-5] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Returned Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:29:11.884 [http-nio-8080-exec-6] WARN  r.a.n.p.r.t.c.s.WatchListService - Error Updating TvSeries with id[1002] on Users[novi] to Watch List : ids of tv series dose not match(1002!=1) 
+2023-08-23 18:29:11.893 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [rs.ac.ni.pmf.rwa.tvseries.exception.IdsNotMatchException: Ids must match]
+2023-08-23 18:29:21.593 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:29:21.596 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Returned Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:29:21.599 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1002]
+2023-08-23 18:29:21.602 [http-nio-8080-exec-7] INFO  r.a.n.p.r.t.c.s.WatchListService - Updating Users[novi] watchlist info about Tv Series with id[1002] 
+2023-08-23 18:29:21.607 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 18:29:46.075 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 18:29:46.077 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 18:29:46.080 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 18:29:50.712 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 19324 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 18:29:50.715 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 18:29:50.765 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 18:29:50.765 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 18:29:51.499 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 18:29:51.562 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2023-08-23 18:29:52.100 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 18:29:52.109 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 18:29:52.109 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 18:29:52.109 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 18:29:52.166 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 18:29:52.167 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1401 ms
+2023-08-23 18:29:52.220 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [E848CA1598951923000ADBACB1657011]
+2023-08-23 18:29:52.350 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 18:29:52.394 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 18:29:52.546 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 18:29:52.640 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 18:29:52.691 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 18:29:52.718 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 18:29:53.312 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 18:29:53.321 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 18:29:53.872 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@202ea705, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@394e51f1, org.springframework.security.web.context.SecurityContextPersistenceFilter@8c88b2c, org.springframework.security.web.header.HeaderWriterFilter@18008eb5, org.springframework.security.web.authentication.logout.LogoutFilter@43b3bc0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@ba25b7a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@348b8b51, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4322c6e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@768cc3a8, org.springframework.security.web.session.SessionManagementFilter@3f1dc520, org.springframework.security.web.access.ExceptionTranslationFilter@6345cc3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@326f4cc]
+2023-08-23 18:29:53.874 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 18:29:53.874 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 18:29:53.874 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 18:29:53.874 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 18:29:54.347 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 18:29:54.366 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 18:29:54.382 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 18:29:54.395 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 4.04 seconds (JVM running for 5.094)
+2023-08-23 18:29:55.294 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 18:29:55.294 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 18:29:55.294 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-08-23 18:29:55.780 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:29:55.804 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Returned Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:29:55.829 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseTvSeriesProvider - Returned Tv Series with id [1002]
+2023-08-23 18:29:55.833 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.c.s.WatchListService - Updating Users[novi] watchlist info about Tv Series with id[1002] 
+2023-08-23 18:29:55.836 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Entry of Tv Series with id[1002] is updated on Users[novi] watchlist  
+2023-08-23 18:30:20.792 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:30:20.795 [http-nio-8080-exec-2] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Returned Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:30:20.818 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.hibernate.LazyInitializationException: failed to lazily initialize a collection of role: rs.ac.ni.pmf.rwa.tvseries.data.entity.UserEntity.watchedTvSeries, could not initialize proxy - no Session]
+2023-08-23 18:30:35.634 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 18:30:35.637 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 18:30:35.640 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-08-23 18:30:39.793 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Starting TvSeriesApplication using Java 17.0.6 on DESKTOP-LLU50GE with PID 588 (C:\Users\Dusan\Desktop\Master\Web\tv-series\tv-series-webapp\target\classes started by Dusan in C:\Users\Dusan\Desktop\Master\Web\tv-series)
+2023-08-23 18:30:39.796 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - No active profile set, falling back to 1 default profile: "default"
+2023-08-23 18:30:39.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-08-23 18:30:39.845 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-08-23 18:30:40.588 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-23 18:30:40.645 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2023-08-23 18:30:41.167 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2023-08-23 18:30:41.176 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2023-08-23 18:30:41.176 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-08-23 18:30:41.176 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.73]
+2023-08-23 18:30:41.230 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-08-23 18:30:41.230 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1385 ms
+2023-08-23 18:30:41.285 [restartedMain] WARN  o.a.c.c.C.[Tomcat].[localhost].[/] - Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [EFDD1644666EF65682CF408B821352F5]
+2023-08-23 18:30:41.408 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-23 18:30:41.450 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-08-23 18:30:41.596 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-08-23 18:30:41.691 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-08-23 18:30:41.742 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-08-23 18:30:41.768 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB53Dialect
+2023-08-23 18:30:42.333 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-23 18:30:42.341 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 18:30:42.900 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3c427ca1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77349dd5, org.springframework.security.web.context.SecurityContextPersistenceFilter@70b62b75, org.springframework.security.web.header.HeaderWriterFilter@354a57bd, org.springframework.security.web.authentication.logout.LogoutFilter@6490d6a4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@68a47337, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@523652b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fdf58e7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f76ddb4, org.springframework.security.web.session.SessionManagementFilter@73b36da3, org.springframework.security.web.access.ExceptionTranslationFilter@75f5d2d3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73e2957c]
+2023-08-23 18:30:42.902 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/swagger-ui/*']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 18:30:42.902 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/swagger-ui/*']
+2023-08-23 18:30:42.902 [restartedMain] WARN  o.s.s.c.a.web.builders.WebSecurity - You are asking Spring Security to ignore Ant [pattern='/v3/api-docs*/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-08-23 18:30:42.902 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will not secure Ant [pattern='/v3/api-docs*/**']
+2023-08-23 18:30:43.344 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2023-08-23 18:30:43.362 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2023-08-23 18:30:43.377 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-23 18:30:43.387 [restartedMain] INFO  r.a.n.p.r.t.TvSeriesApplication - Started TvSeriesApplication in 3.988 seconds (JVM running for 4.752)
+2023-08-23 18:30:51.634 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-08-23 18:30:51.634 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-08-23 18:30:51.635 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-08-23 18:30:52.110 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:30:52.153 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Returned Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:30:52.179 [http-nio-8080-exec-1] INFO  r.a.n.p.r.t.d.p.DatabaseWatchListProvider - Removed Tv Series with id[1002] from users[novi] watch list  
+2023-08-23 18:31:03.881 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.d.p.DatabaseUserProvider - Returned User with username [novi]
+2023-08-23 18:31:03.881 [http-nio-8080-exec-3] INFO  r.a.n.p.r.t.c.s.WatchListService - Getting all TvSeries.
+2023-08-23 18:31:14.175 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-23 18:31:14.177 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-08-23 18:31:14.181 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

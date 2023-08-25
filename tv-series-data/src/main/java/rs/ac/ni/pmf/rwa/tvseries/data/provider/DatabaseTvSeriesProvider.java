@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.annotation.Transactional;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.TvSeriesProvider;
@@ -19,6 +20,7 @@ import java.util.Optional;
 public class DatabaseTvSeriesProvider implements TvSeriesProvider {
 
     private final TvSeriesDao tvSeriesDao;
+    @Transactional
     @Override
     public Optional<TvSeries> getTvSeriesById(Integer id) {
         Optional<TvSeriesEntity> optionalTvSeriesEntity=tvSeriesDao.findById(id);
@@ -54,6 +56,7 @@ public class DatabaseTvSeriesProvider implements TvSeriesProvider {
         );
     }
 
+    @Transactional
     @Override
     public Page<TvSeries> getAllTvSeries(TvSeriesSearchOptions tvSeriesSearchOptions) {
         int page = 0;

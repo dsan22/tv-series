@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.transaction.annotation.Transactional;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.TvSeries;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchTvSeriesSearchOptions;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.WatchedTvSeries;
@@ -33,6 +34,7 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
 
 
     @Override
+    @Transactional
     public void addToWatchList(String username, WatchedTvSeries watchedTvSeries) {
 
         Integer tvSeriesId=watchedTvSeries.getTvSeriesId();
@@ -41,6 +43,7 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
 
         UserEntity user= userDao.findByUsername(username).orElseThrow(()-> new UnknownUserException(username));
         TvSeriesEntity tvSeries= tvSeriesDao.findById(tvSeriesId).orElseThrow(()->new UnknownTvSeriesException(tvSeriesId));
+
         user.getWatchedTvSeries().add(
                 WatchListEntity.
                         builder()
@@ -80,6 +83,7 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
 
 
     @Override
+    @Transactional
     public Optional<TvSeries> getTvSeriesOnWatchListById(String username, Integer tvSeriesId) {
 
         UserEntity user= userDao.findByUsername(username).orElseThrow(()-> new UnknownUserException(username));
@@ -97,6 +101,7 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
     }
 
     @Override
+    @Transactional
     public void update(WatchedTvSeries watchedTvSeries, String username) {
 
         Integer tvSeriesId=watchedTvSeries.getTvSeriesId();
@@ -117,6 +122,7 @@ public class DatabaseWatchListProvider  implements WatchListProvider {
     }
 
     @Override
+    @Transactional
     public void delete(String username, Integer tvSeriesId) {
         UserEntity user= userDao.findByUsername(username).orElseThrow(()-> new UnknownUserException(username));
 

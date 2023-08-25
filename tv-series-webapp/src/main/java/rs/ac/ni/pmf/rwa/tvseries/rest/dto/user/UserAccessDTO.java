@@ -9,7 +9,7 @@ import rs.ac.ni.pmf.rwa.tvseries.shared.Roles;
 @Builder
 public class UserAccessDTO {
 
-    @Schema(description = "Users role",example = "user",defaultValue = "user")
+    @Schema(description = "Users role",example = "USER",defaultValue = "USER")
     @Builder.Default
     Roles role=Roles.USER;
     @Schema(description = "Is User account non expired",example = "true",defaultValue = "true")

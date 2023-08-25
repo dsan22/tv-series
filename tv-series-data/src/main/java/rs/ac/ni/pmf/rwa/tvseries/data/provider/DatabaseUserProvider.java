@@ -2,6 +2,7 @@ package rs.ac.ni.pmf.rwa.tvseries.data.provider;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.transaction.annotation.Transactional;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.User;
 import rs.ac.ni.pmf.rwa.tvseries.core.model.UserAccess;
 import rs.ac.ni.pmf.rwa.tvseries.core.provider.UserProvider;
@@ -49,7 +50,7 @@ public class DatabaseUserProvider implements UserProvider {
         log.info("Saved User");
         userDao.save(entity);
     }
-
+    @Transactional
     @Override
     public void removeUser(String username) {
 

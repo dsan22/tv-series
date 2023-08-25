@@ -44,7 +44,7 @@ public class SecurityConfiguration {
 
                         .antMatchers(HttpMethod.GET, "/tv-series", "/tv-series/**" ).permitAll()
                         .antMatchers(HttpMethod.POST, "/tv-series"  ).hasAnyAuthority(ADMIN)
-                        .antMatchers(HttpMethod.DELETE, "/tv-series"  ).hasAnyAuthority(ADMIN)
+                        .antMatchers(HttpMethod.DELETE, "/tv-series/**"  ).hasAnyAuthority(ADMIN)
                         .antMatchers(HttpMethod.PUT, "/tv-series/**"  ).hasAnyAuthority(ADMIN)
 
                         .antMatchers(HttpMethod.GET, "/users" ).hasAnyAuthority(ADMIN)

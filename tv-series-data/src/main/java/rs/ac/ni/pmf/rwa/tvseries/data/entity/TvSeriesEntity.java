@@ -21,7 +21,7 @@ public class TvSeriesEntity {
     String name;
 
     Integer numberOfEpisodes;
-    @OneToMany(mappedBy = "tvSeries",cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "tvSeries",cascade = CascadeType.ALL)
     List<WatchListEntity> usersWatched;
 
 
